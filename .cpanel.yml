@@ -1,0 +1,29 @@
+# ===========================================
+# cPanel Git Deployment Configuration
+# ===========================================
+# This file tells cPanel how to deploy your repository
+# when you push changes or pull from the cPanel interface.
+#
+# Documentation: https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-how-to-set-up-deployment/
+
+---
+deployment:
+  tasks:
+    # Copy all tracked files to public_html
+    - export DEPLOYPATH=/home/$USER/public_html
+    
+    # Deploy wp-content directory (themes, plugins, mu-plugins)
+    - /bin/cp -R wp-content $DEPLOYPATH/
+    
+    # Deploy .htaccess security rules
+    - /bin/cp .htaccess $DEPLOYPATH/
+    
+    # Set correct permissions for wp-content
+    - /bin/chmod -R 755 $DEPLOYPATH/wp-content/
+    
+    # Set correct permissions for uploads (writable)
+    - /bin/chmod -R 775 $DEPLOYPATH/wp-content/uploads/
+    
+    # Ensure plugins/themes are writable for updates
+    - /bin/chmod -R 775 $DEPLOYPATH/wp-content/plugins/
+    - /bin/chmod -R 775 $DEPLOYPATH/wp-content/themes/
