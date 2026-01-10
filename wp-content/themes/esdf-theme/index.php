@@ -13,6 +13,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
         h1 , h2 {
             color: #fff;
         }
