@@ -2,20 +2,22 @@
 
 <main id="main-content">
     <div class="container">
-        <h1>Welcome to ESDF</h1>
-        <p>This is the start of your custom theme.</p>
-        
-        <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-                the_title('<h2>', '</h2>');
-                the_content();
-            endwhile;
-        else :
-            echo '<p>No content found</p>';
-        endif;
-        ?>
+        <h1>ESDF</h1>
+        <h2>COMING SOON</h2>
     </div>
 </main>
-
+<style>
+    body{
+        background-color: #000;
+        h1 , h2 {
+            color: #fff;
+        }
+        h1{
+            font-size: 8vw;
+        }
+        h2{
+            font-size: 4vw;
+        }
+    }
+</style>
 <?php get_footer(); ?>
