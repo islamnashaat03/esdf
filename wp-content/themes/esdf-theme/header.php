@@ -10,8 +10,5 @@
 
 <header class="site-header">
     <div class="container">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-            <?php bloginfo('name'); ?>
-        </a>
     </div>
 </header>
