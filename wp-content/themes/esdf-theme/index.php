@@ -14,6 +14,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
+        text-align: center;
         h1 , h2 {
             color: #fff;
         }
