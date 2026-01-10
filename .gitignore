@@ -1,94 +1,16 @@
-# ===========================================
-# WordPress Security-First .gitignore
-# ===========================================
-
-# -------------------------------------------
-# WordPress Core (Install via cPanel/Softaculous)
-# -------------------------------------------
-/wp-admin/
-/wp-includes/
+# WordPress Core
+wp-admin/
+wp-includes/
 /wp-*.php
 /index.php
+/xmlrpc.php
 /license.txt
 /readme.html
-/xmlrpc.php
 
-# -------------------------------------------
-# Sensitive Configuration Files
-# -------------------------------------------
-wp-config.php
-wp-config-local.php
-.htaccess.bak
-*.sql
-*.sql.gz
+# User Content Exceptions
+!wp-content/
 
-# -------------------------------------------
-# Debug & Error Logs
-# -------------------------------------------
-debug.log
-error_log
-php_errorlog
-*.log
-
-# -------------------------------------------
-# Uploads Directory (Too large for Git)
-# -------------------------------------------
-wp-content/uploads/*
-!wp-content/uploads/.gitkeep
-
-# -------------------------------------------
-# Cache & Temporary Files
-# -------------------------------------------
-wp-content/cache/
-wp-content/upgrade/
-wp-content/backup*/
-wp-content/backups/
-wp-content/w3tc-config/
-wp-content/advanced-cache.php
-wp-content/object-cache.php
-wp-content/db.php
-
-# -------------------------------------------
-# Common Plugin Cache/Data
-# -------------------------------------------
-wp-content/plugins/wflogs/
-wp-content/wflogs/
-wp-content/updraft/
-wp-content/ai1wm-backups/
-
-# -------------------------------------------
-# IDE & OS Files
-# -------------------------------------------
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
+# System Files
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# -------------------------------------------
-# Node/Build Tools (if using)
-# -------------------------------------------
-node_modules/
-.npm/
-.cache/
-dist/
-build/
-
-# -------------------------------------------
-# Environment Files
-# -------------------------------------------
-.env
-.env.local
-.env.*.local
-*.env
-
-# -------------------------------------------
-# Security - Never Track These
-# -------------------------------------------
-*.pem
-*.key
-*.crt
-/security/wp-config-local.php
+*.log
