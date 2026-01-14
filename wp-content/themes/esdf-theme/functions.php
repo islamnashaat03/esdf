@@ -17,8 +17,8 @@ require_once get_template_directory() . '/inc/theme-setup.php';
 require_once get_template_directory() . '/inc/acf-fields.php';
 
 function esdf_enqueue_scripts() {
-    wp_enqueue_style('esdf-style', get_stylesheet_uri());
+    // Enqueue the main stylesheet from assets/css/
+    wp_enqueue_style('esdf-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'esdf_enqueue_scripts');
-
 

@@ -1,0 +1,47 @@
+.header {
+  margin-bottom: 50px;
+
+  .header-slider {
+    .item {
+      position: relative;
+      height: 500px;
+
+      .image-wrap {
+        height: 100%;
+        position: relative;
+
+        img,
+        video {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 55;
+
+        h2,
+        h3 {
+          color: #fff;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-weight: bold;
+        }
+
+        h3 {
+          font-weight: normal;
+        }
+
+      }
+    }
+  }
+}
