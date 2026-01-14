@@ -77,7 +77,7 @@ $social_links = get_field('social_links', 'option');
 				if($copyright_text) {
 					echo esc_html($copyright_text);
 				} else {
-					echo '&copy; ' . date('Y') . ' ' . get_bloginfo('name') . '. ' . lang_in('All Rights Reserved.', 'جميع الحقوق محفوظة.');
+					echo '&copy; ' . date('Y') . ' ' . esc_html(get_bloginfo('name')) . '. ' . lang_in('All Rights Reserved.', 'جميع الحقوق محفوظة.');
 				}
 				?>
 			</div>

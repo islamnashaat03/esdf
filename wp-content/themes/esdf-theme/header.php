@@ -38,7 +38,7 @@ $social_links = get_field('social_links', 'option');
           <ul class="social-links">
             <?php if(get_field('google-plus', 'option')){ ?>
             <li class="google">
-              <a href="<?php echo get_field('google-plus', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('google-plus', 'option')); ?>">
                 <i class="fa-brands fa-google-plus-g"></i>
               </a>
             </li>
@@ -46,70 +46,70 @@ $social_links = get_field('social_links', 'option');
             <?php if(get_field('whatsapp', 'option')){ ?>
             <li class="whatsapp">
               <a
-                href="https://api.whatsapp.com/send?phone=<?php echo get_field('whatsapp', 'option'); ?>&text=Send20%a20%quote ">
+                href="https://api.whatsapp.com/send?phone=<?php echo esc_attr(get_field('whatsapp', 'option')); ?>&text=Send20%a20%quote ">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('instagram', 'option')){ ?>
             <li class="instagram">
-              <a href="<?php echo get_field('instagram', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('instagram', 'option')); ?>">
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('twitter', 'option')){ ?>
             <li class="twitter">
-              <a href="<?php echo get_field('twitter', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('twitter', 'option')); ?>">
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('telegram', 'option')){ ?>
             <li class="telegram">
-              <a href="<?php echo get_field('telegram', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('telegram', 'option')); ?>">
                 <i class="fa-brands fa-telegram"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('linkedin', 'option')){ ?>
             <li class="linkedin">
-              <a href="<?php echo get_field('linkedin', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('linkedin', 'option')); ?>">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('facebook', 'option')){ ?>
             <li class="facebook">
-              <a href="<?php echo get_field('facebook', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('facebook', 'option')); ?>">
                 <i class="fa-brands fa-square-facebook"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('dribble', 'option')){ ?>
             <li class="dribble">
-              <a href="<?php echo get_field('dribble', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('dribble', 'option')); ?>">
                 <i class="fa-brands fa-dribbble"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('tiktok', 'option')){ ?>
             <li class="tiktok">
-              <a href="<?php echo get_field('tiktok', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('tiktok', 'option')); ?>">
                 <i class="fa-brands fa-tiktok"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('youtube', 'option')){ ?>
             <li class="youtube">
-              <a href="<?php echo get_field('youtube', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('youtube', 'option')); ?>">
                 <i class="fa-brands fa-youtube"></i>
               </a>
             </li>
             <?php } ?>
             <?php if(get_field('snapchat', 'option')){ ?>
             <li class="facebook">
-              <a href="<?php echo get_field('snapchat', 'option'); ?>">
+              <a href="<?php echo esc_url(get_field('snapchat', 'option')); ?>">
                 <i class="fa-brands fa-snapchat"></i>
               </a>
             </li>
@@ -117,7 +117,7 @@ $social_links = get_field('social_links', 'option');
           </ul>
           <div class="icons">
             <div class="search-div">
-              <form class="search-form" action="<?php bloginfo('home')?>/">
+              <form class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="input-wrap">
                   <input type="search" class="input-text"
                     placeholder="<?php if(ICL_LANGUAGE_CODE == 'ar'){ ?>عن ماذا تبحث؟<?php } elseif (ICL_LANGUAGE_CODE == 'en'){  ?> What are you looking for? <?php } ?>"
@@ -150,16 +150,13 @@ $social_links = get_field('social_links', 'option');
     <div class="nav-bar wow fadeInDown">
       <div class="container">
         <nav class="nav-flex">
-          <a href="<?php bloginfo('home')?>" class="navbar-brand">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
             <!-- LOGO -->
             <img src="<?php echo get_field('logo', 'option'); ?>" alt="">
           </a>
           <?php wp_nav_menu( array('theme_location' => 'main_menu', 'container' => false, 'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
                   ) ); ?>
           <div class="icons">
-            <a href="https://store.najdclub.sa" class="btn main-btn">
-              <span><?php lang_in('المتجر الالكتروني ' , 'Store '); ?></span>
-            </a>
             <a class="languages"
               href="<?php if(ICL_LANGUAGE_CODE == 'ar'){ echo '?lang=en'; } elseif(ICL_LANGUAGE_CODE == 'en'){ echo '?lang=ar'; } ?>">
               <?php
@@ -189,7 +186,7 @@ $social_links = get_field('social_links', 'option');
   <!-- END MOBILE  -->
   <div class="navbar-mobile">
     <div class="nav-flex">
-      <a href="<?php echo get_page_uri();?>" class="navbar-brand">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
         <!-- LOGO -->
         <img src="<?php echo get_field('logo', 'option'); ?>" alt="">
       </a>

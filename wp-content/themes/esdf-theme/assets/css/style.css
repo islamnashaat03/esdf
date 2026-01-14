@@ -6,12 +6,12 @@ Description: Custom theme for ESDF (Egyptian Sustainable Development Forum)
 Version: 1.0.0
 */
 
-@import "globla styles.css";
+@import "global-styles.css";
 @import "header-style.css";
+@import "navbar.css";
 
 
-
-@import "media-quirres.css";
+@import "media-queries.css";
 
 /* Container */
 .container {
