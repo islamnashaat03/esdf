@@ -51,7 +51,7 @@ $partners = get_field('partners_logos', 'option');
 							<h2 class="section-title"><?php echo esc_html($about['title']); ?></h2>
 						<?php endif; ?>
 						<div class="about-text">
-							<?php echo $about['content']; ?>
+							<?php echo wp_kses_post($about['content']); ?>
 						</div>
 					</div>
 					<?php if($about['image']): ?>
