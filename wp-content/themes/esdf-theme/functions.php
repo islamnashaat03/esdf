@@ -14,7 +14,6 @@ add_action('after_setup_theme', 'esdf_theme_setup');
  * External Theme Setup
  */
 require_once get_template_directory() . '/inc/theme-setup.php';
-require_once get_template_directory() . '/inc/acf-fields.php';
 
 function esdf_enqueue_scripts() {
     // Enqueue the main stylesheet from assets/css/
