@@ -17,6 +17,7 @@ require_once get_template_directory() . '/inc/theme-setup.php';
 
 function esdf_enqueue_scripts() {
     // Enqueue the main stylesheet from assets/css/
+    wp_enqueue_style('esdf-bootstrap-grid', get_template_directory_uri() . '/assets/css/bootstrap-grid.min.css', array(), '1.0.0');
     wp_enqueue_style('esdf-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'esdf_enqueue_scripts');
