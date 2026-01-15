@@ -1,0 +1,210 @@
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -1200px;
+  background-color: #21243db0;
+  color: var(--text-color);
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 20px 20px 0 0;
+  overflow: scroll;
+  width: 90%;
+  height: 100%;
+  transition: var(--transition);
+  transition: 1s ease-out all;
+  text-align: start;
+  border-left: 4px solid #fff;
+  z-index: 99999;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #000000b3;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s all linear;
+  }
+
+
+  .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 55;
+    flex-direction: column;
+
+    .navbar-brand {
+      img {
+        width: 85px;
+      }
+    }
+
+    .close-btn {
+      display: block;
+      text-align: left;
+      padding-left: 10px;
+      font-size: 35px;
+      color: #fff;
+      margin: 10px;
+    }
+
+    &::after {
+      content: "";
+      background-color: var(--text-color);
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: -10px;
+      right: -15px;
+    }
+  }
+
+  .mobile-links {
+    padding: 15px;
+    position: relative;
+    z-index: 55;
+    justify-content: flex-end;
+
+    li {
+      position: relative;
+      padding: 10px 0;
+
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 5px;
+        font-size: 18px;
+        transition: var(--transition);
+        border-radius: 6px;
+        font-weight: bold;
+        color: #fff;
+        gap: 10px;
+
+        &.active {
+          color: #fff;
+          font-weight: bold;
+          transition: var(--transition);
+          background-color: var(--primary-color);
+
+        }
+      }
+
+      &.menu-item-has-children {
+        position: relative;
+
+        >a {
+          &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f104";
+            margin: 0 5px;
+            inset-inline-end: 10px;
+            top: 50%;
+            position: absolute;
+            transform: rotate(0deg) translate(0, -50%);
+            transition: var(--transition);
+            color: #fff;
+          }
+
+          &.arrow {
+            padding: 10px;
+
+            &::after {
+              transform: rotate(-90deg) translate(0, -50%);
+              transition: var(--transition);
+              transform-origin: center top;
+            }
+          }
+        }
+
+
+      }
+
+      .sub-menu {
+        background: #21243d14;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 85%;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: .5s all ease-in-out;
+        margin-inline-start: 10px;
+
+        >li {
+          padding: 10px 10px 10px 0;
+          position: relative;
+
+          a {
+            color: #fff;
+            position: relative;
+            display: flex;
+          }
+        }
+
+        &.show {
+          opacity: 1;
+          max-height: 1000px;
+          visibility: visible;
+          padding: 10px 0;
+          transition: var(--transition);
+          margin-top: 10px;
+        }
+      }
+
+      &.clicked {
+        >a {
+          background-color: var(--primary-color);
+          color: #fff !important;
+          transition: var(--transition);
+
+        }
+      }
+    }
+
+
+    li {
+      position: relative;
+    }
+  }
+
+
+
+
+
+
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    transition: 1s ease all;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transition: .7s all linear;
+      width: 88%;
+    }
+
+  }
+
+
+}

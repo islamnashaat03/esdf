@@ -68,25 +68,15 @@ if ( ! defined( 'ABSPATH' ) ) {
           <nav class="nav-flex">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
               <!-- LOGO -->
-              <img src="<?php echo get_field('site_logo', 'option'); ?>" alt="">
+              <img src="<?php echo get_field('site_logo' , 'option'); ?>" alt="logo">
             </a>
             <?php wp_nav_menu( array('theme_location' => 'main_menu', 'container' => false, 'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
                     ) ); ?>
             <div class="icons">
-              <a class="languages"
-                href="<?php if(ICL_LANGUAGE_CODE == 'ar'){ echo '?lang=en'; } elseif(ICL_LANGUAGE_CODE == 'en'){ echo '?lang=ar'; } ?>">
-                <?php
-                  if(ICL_LANGUAGE_CODE == 'ar'){
-                      ?>
-                En
-                <?php
-                  } elseif (ICL_LANGUAGE_CODE == 'en'){
-                      ?>
-                Ar
-                <?php
-                  }
-                  ?>
-              </a>
+              <a class="languages" href="<?php echo esc_url( lang_in( home_url('/ar/'), home_url('/') ) ); ?>">
+  <?php echo lang_in('Ar', 'En'); ?>
+</a>
+
 
             </div>
             <a class="toggle-btn menu-btn" type="button">

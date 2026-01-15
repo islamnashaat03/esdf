@@ -9,6 +9,7 @@ Version: 1.0.0
 @import "global-styles.css";
 @import "header-style.css";
 @import "navbar.css";
+@import "navbar-mobile.css";
 
 
 
