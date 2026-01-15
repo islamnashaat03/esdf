@@ -109,6 +109,9 @@ ul {
   height: 100%;
   background-color: #0000007d;
   z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
 }
 
 /* Links */
