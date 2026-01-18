@@ -21,7 +21,7 @@
     min-height: auto;
     display: block;
     margin-top: 50px;
-    margin-left: 0;
+    margin-inline-start: 0;
     cursor: pointer;
   }
 
@@ -38,8 +38,8 @@
 
         &[type='submit'] {
           position: absolute;
-          left: 3px;
-          right: auto;
+          inset-inline-start: 3px;
+          inset-inline-end: auto;
           top: 2px;
           width: fit-content;
           min-width: 110px;

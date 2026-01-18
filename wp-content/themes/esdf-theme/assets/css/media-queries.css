@@ -131,7 +131,7 @@
     }
 
     .contact-box {
-      left: 0;
+      inset-inline-start: 0;
       right: 0;
       margin: auto;
     }
@@ -143,7 +143,7 @@
 
   .nav-bar .nav-flex .languages {
     margin-right: auto;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 
   .about .wrapper .add-point {
@@ -164,7 +164,7 @@
 
     .dots-left {
       top: -35px;
-      left: -35px;
+      inset-inline-start: -35px;
     }
   }
 
@@ -226,7 +226,7 @@
 
   .home-header .main-slider .item .info {
     right: 0;
-    left: 0;
+    inset-inline-start: 0;
     padding: 0 15px;
 
     h2 {

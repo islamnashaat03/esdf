@@ -5,8 +5,8 @@
 .fixed-nav.fixed {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   width: 100%;
   z-index: 99;
   background-color: transparent;
@@ -197,7 +197,7 @@
   content: "";
   position: absolute;
   bottom: -12px;
-  left: 0;
+  inset-inline-start: 0;
   right: 0;
   margin: auto;
   width: 0;
@@ -301,7 +301,7 @@
 .nav-bar .nav-flex .navbar-links .sub-menu>li.menu-item-has-children>.sub-menu {
   position: absolute;
   top: 0;
-  left: -100px;
+  inset-inline-start: -100px;
   background: #fff;
   padding: 15px;
   list-style: none;
@@ -318,7 +318,7 @@
 .nav-bar .nav-flex .navbar-links .sub-menu>li.menu-item-has-children:hover>.sub-menu {
   transition: .5s all ease-in-out;
   top: 0px;
-  left: -160px;
+  inset-inline-start: -160px;
   opacity: 1;
   visibility: visible;
   box-shadow: 0px 0px 6px 3px rgba(238, 238, 238, 0.75);
