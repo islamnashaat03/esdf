@@ -72,7 +72,6 @@ ul {
   gap: 10px;
   position: relative;
   z-index: 3;
-  background: var(--primary-color) linear-gradient(var(--primary-color) 0 0) left /var(--d, 5%) 100% no-repeat;
   transition: var(--transition);
 }
 
@@ -84,7 +83,7 @@ ul {
 
 .main-btn:hover {
   transition: var(--transition);
-  background: var(--primary-color) linear-gradient(var(--primary-color) 0 0) left /var(--d, 95%) 100% no-repeat;
+  background: var(--primary-color);
 }
 
 .main-btn.reversed {
