@@ -72,13 +72,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             </a>
             <?php wp_nav_menu( array('theme_location' => 'main_menu', 'container' => false, 'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
                     ) ); ?>
-            <div class="icons">
-              <a class="languages" href="<?php echo esc_url( lang_in( home_url('/ar/'), home_url('/') ) ); ?>">
-  <?php echo lang_in('Ar', 'En'); ?>
-</a>
-
-
-            </div>
             <a class="toggle-btn menu-btn" type="button">
               <span class="bar bar--1"></span>
               <span class="bar bar--2"></span>

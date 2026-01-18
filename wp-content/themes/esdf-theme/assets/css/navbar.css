@@ -181,11 +181,11 @@
   justify-content: space-between;
   gap: 3px;
   padding: 5px 0;
-  font-size: 13px;
+  font-size: 16px;
   transition: var(--transition);
   border-radius: 6px;
   font-weight: bold;
-  color: #AAAAAA;
+  color: #000;
   gap: 10px;
 }
 
@@ -345,7 +345,8 @@
   margin-inline-start: auto;
   padding-inline-end: 20px;
   color: #fff;
-  /* display: none; */
+  flex: 0
+    /* display: none; */
 }
 
 .nav-bar .nav-flex .icons .languages {

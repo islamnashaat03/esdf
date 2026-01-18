@@ -1,0 +1,440 @@
+@media screen and (max-width:1920px) {
+
+  .nav-bar {
+    .nav-flex {
+
+      .menu-btn {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-mobile {
+    &.active {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+}
+
+@media screen and (max-width:1199px) {
+  .nav-bar {
+    position: relative;
+
+    .nav-flex {
+      gap: 15px;
+      flex-wrap: wrap;
+
+      .navbar-brand {
+        img {
+          width: 165px;
+        }
+      }
+
+      .navbar-links {
+        display: none;
+      }
+
+
+      .toggle-btn {
+        display: flex;
+
+      }
+
+      .contact-btn {
+        display: none;
+      }
+
+      .icons {
+        margin-inline-start: auto;
+        font-size: 24px;
+        font-weight: bold;
+        gap: 10px;
+
+        margin-right: auto;
+        margin-left: 0;
+
+        .main-btn {
+          display: none;
+          min-width: 90px;
+        }
+      }
+    }
+  }
+
+  .navbar-mobile {
+    &.active {
+      opacity: 1;
+      visibility: visible;
+
+      .main-btn {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        min-width: 120px;
+      }
+    }
+
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+@media screen and (max-width:991px) {
+  .form-modal .form-wrapper {
+    width: 80%;
+  }
+
+  .news .container .row--edit .slider-wrapper {
+    position: unset;
+    transform: translate(0, 0);
+    width: 100%;
+  }
+
+  .subscribe .wrapper {
+    flex-wrap: wrap;
+
+    .form-wrapper form {
+      flex-wrap: wrap;
+    }
+  }
+
+  .tax-page .box {
+    flex-direction: column;
+  }
+
+  .header-wrapper {
+    margin-bottom: 0;
+  }
+
+  .contact-section .form-wrapper {
+    padding: 20px;
+  }
+
+  .contact-us .contact-wrapper {
+    &::before {
+      width: 100%;
+    }
+
+    .info {
+      padding-bottom: 0;
+    }
+
+    .left-side {
+      padding-bottom: 50px;
+    }
+
+    .contact-box {
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  .col--edit {
+    margin-bottom: 30px;
+  }
+
+  .nav-bar .nav-flex .languages {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .about .wrapper .add-point {
+    flex-wrap: wrap;
+
+
+    .image-wrap {
+      width: 100%;
+      flex: none;
+      height: 250px;
+    }
+
+    .text {
+      width: 100%;
+      flex: 1;
+      margin-inline-start: 0
+    }
+
+    .dots-left {
+      top: -35px;
+      left: -35px;
+    }
+  }
+
+  .upper-bar .wrapper .wrap-flex {
+    width: auto;
+  }
+
+
+
+  .why-us .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .list-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  }
+
+  .about .wrapper .add-point .slider-wrapper .float-logo {
+    width: 85px;
+    inset-inline-end: -10px;
+  }
+
+  .services .wrapper .box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .about .wrapper {
+    flex-wrap: wrap;
+
+    .add-point {
+      flex-direction: column;
+
+      .slider-wrapper {
+        width: 100%;
+      }
+
+      .textt-wrap {
+        width: 100%;
+      }
+    }
+
+    .box {
+      width: 100%;
+    }
+  }
+
+  .about-page .wrapper-points .add-point .row--edit .images {
+    flex-wrap: wrap;
+  }
+
+  .footer-bg-wrapper .copyright .container {
+    justify-content: center;
+  }
+
+
+  .home-header .main-slider .item .info {
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+  }
+
+
+  .footer {
+    .wrapper .logo .image-wrap {
+      margin: 0 auto 30px;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+  }
+
+  .about-page .why-us-sec .wrapper {
+    flex-direction: column;
+  }
+
+  .upper-bar .wrapper {
+    justify-content: center;
+    gap: 15px;
+
+    .left-side {
+      width: fit-content;
+      justify-content: center;
+
+      &.active {
+        width: 100%;
+      }
+
+      .search-icon {
+        border-top: 1px solid #fff;
+      }
+    }
+
+    .wrap-flex {
+      width: auto;
+    }
+
+    .navbar-brand {
+      gap: 10px;
+
+      span {
+        font-size: 14px;
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+
+
+  }
+
+  .upper-bar .wrapper .home-header .main-slider .item .info {
+    max-width: 100%;
+  }
+
+  .home-header .main-slider .item .info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+
+  .services-section .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscribe-section .subscribe {
+    .text {
+      max-width: 100%;
+    }
+
+    .search-div {
+      width: 100%;
+
+      form {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .book-ad .wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+
+    .image-wrap {
+      flex: auto;
+      height: 350px;
+      width: 100%;
+    }
+
+    .text-side {
+      flex: auto;
+      width: 100%;
+      align-items: center;
+
+
+      .text {
+        text-align: center;
+      }
+    }
+  }
+
+
+
+  .head .text {
+    width: 100%;
+  }
+
+  .gallery .images {
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+
+    a {
+      height: 150px;
+    }
+
+
+  }
+
+  .about-page .head-wrapper {
+    flex-direction: column;
+  }
+
+  .about-page .page-wrapper .content {
+    width: 100%;
+  }
+
+  .form-wrapper form .wrap-flex {
+    flex-direction: column;
+  }
+
+  .articles-section .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .copyright .container {
+    justify-content: center;
+  }
+
+  .products .cont--edit .wrapper--flex {
+    gap: 20px;
+
+    .product {
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (max-width:576px) {
+
+  .section-wrapper .facts-section .wrapper {
+    flex-wrap: wrap;
+
+    .fact {
+      flex: 1 1 45%;
+    }
+
+  }
+
+  .form-modal .form-wrapper {
+    width: 90%;
+  }
+
+  .consaltants-section .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .home-header .main-slider .owl-nav,
+  .owl-theme .owl-nav.disabled+.owl-dots {
+    display: none;
+  }
+
+  .nav-bar .nav-flex .main-btn {
+    min-width: fit-content;
+  }
+
+  .home-header .main-slider .item .info {
+    .text-wrap {
+      h2 {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 20px;
+        max-width: 100%;
+      }
+
+      .text {
+        font-size: 14px;
+        width: 100%;
+        max-height: 115px;
+      }
+    }
+  }
+
+  .home-header .float-social-link {
+    bottom: 65px;
+  }
+}

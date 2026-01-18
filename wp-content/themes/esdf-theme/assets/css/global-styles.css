@@ -124,3 +124,20 @@ a {
 a:hover {
   color: var(--secondary-color);
 }
+
+.toggle-btn {
+  display: flex;
+  flex-direction: column;
+  width: 31px;
+  height: 21px;
+  justify-content: space-between;
+  cursor: pointer;
+  flex: 0 0 10.5%;
+  max-width: 32px;
+
+  .bar {
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+  }
+}
