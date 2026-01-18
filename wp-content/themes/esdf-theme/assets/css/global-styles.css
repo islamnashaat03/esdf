@@ -71,14 +71,14 @@ ul {
   justify-content: center;
   gap: 10px;
   position: relative;
-  z-index: 3;
-  transition: var(--transition);
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .main-btn span {
-  position: relative;
-  z-index: 6;
-  font-size: 12px;
+  /* position: relative; */
+  /* z-index: 6; */
+  /* font-size: 12px; */
 }
 
 .main-btn:hover {

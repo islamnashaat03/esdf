@@ -86,7 +86,7 @@ if (!defined('ABSPATH')) {
             </form>
           </div>
           <button class="search-btn main-btn">
-            <span><?php echo lang_in('بحث', 'Search'); ?></span>
+            <span><?php echo lang_in('search', 'بحث'); ?></span>
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
           <a class="toggle-btn menu-btn" type="button">
