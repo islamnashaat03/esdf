@@ -227,7 +227,7 @@
 }
 
 .nav-bar .nav-flex .navbar-links>li.menu-item-has-children>a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f107";
   margin: 0 5px;
@@ -292,7 +292,7 @@
 }
 
 .nav-bar .nav-flex .navbar-links .sub-menu>li.menu-item-has-children>a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f104";
   margin: 0 5px;
