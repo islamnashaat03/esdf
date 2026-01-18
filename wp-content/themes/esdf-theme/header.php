@@ -30,18 +30,17 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="upper-bar">
         <div class="container">
           <div class="wrapper">
-            <ul class="social-links">
-              <?php if ( have_rows( 'social_accounts', 'option' ) ) : ?>
-                <?php while ( have_rows( 'social_accounts', 'option' ) ) : the_row(); ?>
-                  <li class="social-link">
-                    <a href="<?php echo esc_url( get_sub_field( 'social_link' ) ); ?>" target="_blank" rel="noopener">
-                      <i class="<?php echo esc_attr( get_sub_field( 'social_icon' ) ); ?>"></i>
-                    </a>
-                  </li>
-                <?php endwhile; ?>
-              <?php endif; ?>
-            </ul>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
+              <!-- LOGO -->
+              <?php 
+                    $logo = get_field('site_logo', 'option');
+                    if ($logo): ?>
+                        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+                    <?php endif; ?>
+            </a>
+            
             <div class="icons">
+             
               <div class="search-div">
                 <form class="search-form" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                   <div class="input-wrap">
@@ -54,6 +53,17 @@ if ( ! defined( 'ABSPATH' ) ) {
                   </div>
                 </form>
               </div>
+               <ul class="social-links">
+                <?php if ( have_rows( 'social_accounts', 'option' ) ) : ?>
+                  <?php while ( have_rows( 'social_accounts', 'option' ) ) : the_row(); ?>
+                    <li class="social-link">
+                      <a href="<?php echo esc_url( get_sub_field( 'social_link' ) ); ?>" target="_blank" rel="noopener">
+                        <i class="<?php echo esc_attr( get_sub_field( 'social_icon' ) ); ?>"></i>
+                      </a>
+                    </li>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+            </ul>
               <?php if ( defined( 'ICL_LANGUAGE_CODE' ) ) : ?>
                 <a class="languages" href="<?php echo esc_url( ICL_LANGUAGE_CODE === 'ar' ? '?lang=en' : '?lang=ar' ); ?>">
                   <?php echo ICL_LANGUAGE_CODE === 'ar' ? 'En' : 'Ar'; ?>
@@ -66,10 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="nav-bar wow fadeInDown">
         <div class="container">
           <nav class="nav-flex">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand">
-              <!-- LOGO -->
-              <img src="<?php echo get_field('site_logo' , 'option'); ?>" alt="logo">
-            </a>
+            
             <?php wp_nav_menu( array('theme_location' => 'main_menu', 'container' => false, 'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
                     ) ); ?>
             <a class="toggle-btn menu-btn" type="button">

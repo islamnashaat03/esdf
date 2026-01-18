@@ -184,9 +184,13 @@
   font-size: 16px;
   transition: var(--transition);
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 400;
   color: #000;
   gap: 10px;
+}
+
+.nav-bar .nav-flex .navbar-links>li>a.current-menu-item {
+  color: var(--primary-color);
 }
 
 .nav-bar .nav-flex .navbar-links>li>a::before {
