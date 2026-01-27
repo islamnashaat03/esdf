@@ -95,7 +95,7 @@ if (!defined('ABSPATH')) {
               <i class="fa-solid fa-xmark"></i>
             </a>
           </div>
-          <button class="search-btn main-btn">
+          <button class="search-open-btn main-btn">
             <span><?php echo lang_in('search', 'بحث'); ?></span>
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>

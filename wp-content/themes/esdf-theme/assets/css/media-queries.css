@@ -91,12 +91,6 @@
       }
     }
   }
-}
-
-@media screen and (max-width:767px) {
-  .nav-bar .nav-flex .main-btn {
-    min-width: fit-content;
-  }
 
   .mobile-logo {
     display: block;
@@ -109,6 +103,14 @@
   .upper-bar .wrapper .navbar-brand {
     display: none;
   }
+}
+
+@media screen and (max-width:767px) {
+  .nav-bar .nav-flex .main-btn {
+    min-width: fit-content;
+  }
+
+
 
   .nav-bar .nav-flex .icons {
     padding: 0;
