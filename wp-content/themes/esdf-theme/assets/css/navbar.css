@@ -374,3 +374,7 @@
   border: 2px solid var(--primary-color);
   color: #fff;
 }
+
+.mobile-logo {
+  display: none;
+}

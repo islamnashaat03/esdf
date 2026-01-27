@@ -34,12 +34,12 @@ if (!defined('ABSPATH')) {
           <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand">
             <!-- LOGO -->
             <?php
-            $logo = get_field('site_logo', 'option'); ?>
-            <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+            $logo = get_field('site_logo', 'option');
+            if ($logo) : ?>
+              <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+            <?php endif; ?>
           </a>
-
           <div class="icons">
-
             <ul class="social-links">
               <?php if (have_rows('social_accounts', 'option')): ?>
                 <?php while (have_rows('social_accounts', 'option')):
@@ -65,8 +65,15 @@ if (!defined('ABSPATH')) {
             'container' => false,
             'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
           )); ?>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand mobile-logo">
+            <!-- LOGO -->
+            <?php
+            $logo = get_field('site_logo', 'option');
+            if ($logo) : ?>
+              <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+            <?php endif; ?>
+          </a>
           <div class="icons">
-
             <?php if (defined('ICL_LANGUAGE_CODE')): ?>
               <a class="languages" href="<?php echo esc_url(ICL_LANGUAGE_CODE === 'ar' ? '/en' : '/ar'); ?>">
                 <?php echo ICL_LANGUAGE_CODE === 'ar' ? 'En' : 'Ar'; ?>
@@ -84,6 +91,9 @@ if (!defined('ABSPATH')) {
                 </button>
               </div>
             </form>
+            <a class="search-close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
           </div>
           <button class="search-btn main-btn">
             <span><?php echo lang_in('search', 'بحث'); ?></span>
@@ -104,9 +114,13 @@ if (!defined('ABSPATH')) {
     <div class="nav-flex">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand">
         <!-- LOGO -->
-        <img src="<?php echo get_field('site_logo', 'option'); ?>" alt="">
+        <?php
+        $logo = get_field('site_logo', 'option');
+        if ($logo) : ?>
+          <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+        <?php endif; ?>
       </a>
-      <a class="btn close-btn">
+      <a class="btn navbar-close-btn">
         <i class="fa-solid fa-xmark"></i>
       </a>
     </div>
