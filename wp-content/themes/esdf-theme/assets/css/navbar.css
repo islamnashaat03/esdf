@@ -98,12 +98,12 @@
 .upper-bar .wrapper .social-links li a {
   width: 27px;
   height: 27px;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #000;
   font-size: 20px;
   background: transparent;
 }

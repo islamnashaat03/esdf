@@ -103,6 +103,20 @@
   .upper-bar .wrapper .navbar-brand {
     display: none;
   }
+
+  .upper-bar .wrapper {
+    justify-content: center;
+
+  }
+
+  .upper-bar .wrapper .icons {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .upper-bar .wrapper .social-links li a span {
+    color: #000;
+  }
 }
 
 @media screen and (max-width:767px) {
