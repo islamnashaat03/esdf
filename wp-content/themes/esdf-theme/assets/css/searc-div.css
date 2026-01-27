@@ -28,6 +28,15 @@
     cursor: pointer;
   }
 
+  .search-close-btn {
+    position: absolute;
+    top: 30px;
+    inset-inline-end: 40px;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+  }
+
   form {
     width: 60%;
 

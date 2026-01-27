@@ -29,6 +29,7 @@ document.onload = function () {
   });
 
   togglesearchbtn.addEventListener('click', () => {
+    console.log('searchhhhhhh');
     toggleActiveState(['.search-div', '.overlay-all'], true);
   });
 
