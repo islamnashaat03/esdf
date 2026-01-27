@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
   <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
 
   <!-- START UPPER BAR  -->
-  <div class="fixed-nav fixed">
+  <div class="fixed-nav">
     <div class="upper-bar">
       <div class="container">
         <div class="wrapper">

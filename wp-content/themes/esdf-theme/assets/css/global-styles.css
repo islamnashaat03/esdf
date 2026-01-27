@@ -52,6 +52,30 @@ ul {
   padding: 0;
 }
 
+.up {
+  position: fixed;
+  bottom: 20px;
+  inset-inline-end: -80px;
+  z-index: 99;
+  background: var(--primary-color);
+  /* padding: 12px; */
+  border-radius: 6px;
+  /* width: 20px; */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.up.active {
+  inset-inline-end: 20px;
+}
+
 .main-btn {
   background-color: var(--primary-color);
   padding: 10px;
