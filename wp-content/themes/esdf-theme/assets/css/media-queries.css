@@ -22,7 +22,9 @@
 
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width:1199px) {}
+
+@media screen and (max-width:991px) {
   .nav-bar {
     position: relative;
 
@@ -67,6 +69,15 @@
     }
   }
 
+  .nav-bar .nav-flex .languages {
+    margin-right: auto;
+    margin-inline-start: 0;
+  }
+
+  .upper-bar .wrapper .wrap-flex {
+    width: auto;
+  }
+
   .navbar-mobile {
     &.active {
       opacity: 1;
@@ -79,23 +90,7 @@
         min-width: 120px;
       }
     }
-
-    opacity: 1;
-    visibility: visible;
   }
-
-}
-
-@media screen and (max-width:991px) {
-  .nav-bar .nav-flex .languages {
-    margin-right: auto;
-    margin-inline-start: 0;
-  }
-
-  .upper-bar .wrapper .wrap-flex {
-    width: auto;
-  }
-
 }
 
 @media screen and (max-width:767px) {
