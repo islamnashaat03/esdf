@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         upBtn.classList.remove('active');
       }
     }
-    if (menu) {
+    if (mainMenu) {
       if (window.scrollY > 100) {
         mainMenu.classList.add('fixed');
       } else {
