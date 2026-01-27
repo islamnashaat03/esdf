@@ -8,7 +8,6 @@ const closeSearchBtn = document.querySelector('.search-close-btn')
 const navBarCloseBtn = document.querySelector('.navbar-close-btn')
 
 menuBtn.addEventListener('click', () => {
-  console.log("menuuuuuu")
   menu.classList.add('active');
   overlay.classList.add('active');
 });
@@ -24,14 +23,11 @@ overlay.addEventListener('click', () => {
 });
 
 searchOpenBtn.addEventListener('click', () => {
-  console.log("searchhhhhh")
   searchDiv.classList.add('active');
-  overlay.classList.add('active');
 });
 
 closeSearchBtn.addEventListener('click', () => {
   searchDiv.classList.remove('active');
-  overlay.classList.remove('active');
 });
 
 navBarCloseBtn.addEventListener('click', () => {

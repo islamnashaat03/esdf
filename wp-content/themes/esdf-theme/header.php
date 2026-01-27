@@ -40,19 +40,22 @@ if (!defined('ABSPATH')) {
             <?php endif; ?>
           </a>
           <div class="icons">
-            <ul class="social-links">
-              <?php if (have_rows('social_accounts', 'option')): ?>
-                <?php while (have_rows('social_accounts', 'option')):
-                  the_row(); ?>
-                  <li class="social-link">
-                    <a href="<?php echo esc_url(get_sub_field('social_link')); ?>" target="_blank" rel="noopener">
-                      <i class="<?php echo esc_attr(get_sub_field('social_icon')); ?>"></i>
-                    </a>
-                  </li>
-                <?php endwhile; ?>
-              <?php endif; ?>
-            </ul>
-
+              <ul class="social-links">
+                <?php if ( have_rows('social_accounts', 'option') ) : ?>
+                  <?php while ( have_rows('social_accounts', 'option') ) : the_row(); 
+                    $icon = get_sub_field('social_icon');
+                    $link = get_sub_field('social_link');
+                  ?>
+                    <?php if ( $icon && $link ) : ?>
+                      <li class="social-link">
+                        <a href="<?php echo esc_url( $link ); ?>" target="_blank" rel="noopener">
+                          <span class="dashicons <?php echo esc_attr( $icon ); ?>"></span>
+                        </a>
+                      </li>
+                    <?php endif; ?>
+                  <?php endwhile; ?>
+                <?php endif; ?>
+              </ul>
           </div>
         </div>
       </div>
