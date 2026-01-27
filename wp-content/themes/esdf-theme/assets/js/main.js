@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (menu) {
       if (window.scrollY > 100) {
-        menu.classList.add('fixed');
+        mainMenu.classList.add('fixed');
       } else {
-        menu.classList.remove('fixed');
+        mainMenu.classList.remove('fixed');
       }
     }
 
