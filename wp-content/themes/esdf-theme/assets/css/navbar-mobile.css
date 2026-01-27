@@ -9,16 +9,16 @@
   opacity: 0;
   visibility: hidden;
   text-align: center;
-  padding: 20px 20px 0 0;
-  overflow: scroll;
+  /* padding: 20px 20px 0 0; */
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 90%;
   height: 100%;
   transition: var(--transition);
   transition: 1s ease-out all;
   text-align: start;
-  border-inline-start: 4px solid #fff;
+  border-inline-end: 4px solid #fff;
   z-index: 102;
-  position: relative;
 
   &::before {
     content: "";
@@ -44,6 +44,7 @@
     margin-bottom: 20px;
     z-index: 55;
     align-items: center;
+    padding: 15px;
 
     .navbar-brand {
       img {
@@ -63,11 +64,13 @@
     &::after {
       content: "";
       background-color: var(--text-color);
-      width: 100%;
+      width: 90%;
       height: 1px;
       position: absolute;
       bottom: -10px;
-      inset-inline-end: -15px;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   }
 
@@ -201,7 +204,7 @@
       opacity: 1;
       visibility: visible;
       transition: .7s all linear;
-      width: 88%;
+      width: 89%;
     }
 
   }

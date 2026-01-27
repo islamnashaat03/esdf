@@ -79,6 +79,6 @@
   &.active {
     opacity: 1;
     visibility: visible;
-    transition: .5s all ease-in-out;
+    transition: var(--transition);
   }
 }

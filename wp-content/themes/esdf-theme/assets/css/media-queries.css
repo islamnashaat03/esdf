@@ -110,6 +110,12 @@
     min-width: fit-content;
   }
 
+  .search-div {
+    form {
+      width: 85%;
+    }
+  }
+
 
 
   .nav-bar .nav-flex .icons {
