@@ -5,6 +5,7 @@ const overlay = document.querySelector('.overlay-all');
 const searchOpenBtn = document.querySelector('.search-open-btn')
 const searchDiv = document.querySelector('.search-div')
 const closeSearchBtn = document.querySelector('.search-close-btn')
+const navBarCloseBtn = document.querySelector('.navbar-close-btn')
 
 menuBtn.addEventListener('click', () => {
   console.log("menuuuuuu")
@@ -32,3 +33,9 @@ closeSearchBtn.addEventListener('click', () => {
   searchDiv.classList.remove('active');
   overlay.classList.remove('active');
 });
+
+navBarCloseBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+

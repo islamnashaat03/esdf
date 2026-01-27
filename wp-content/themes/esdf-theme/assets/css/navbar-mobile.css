@@ -17,7 +17,7 @@
   transition: 1s ease-out all;
   text-align: start;
   border-inline-start: 4px solid #fff;
-  z-index: 99999;
+  z-index: 102;
   position: relative;
 
   &::before {
@@ -43,7 +43,7 @@
     position: relative;
     margin-bottom: 20px;
     z-index: 55;
-    flex-direction: column;
+    align-items: center;
 
     .navbar-brand {
       img {
@@ -51,7 +51,7 @@
       }
     }
 
-    .close-btn {
+    .navbar-close-btn {
       display: block;
       text-align: start;
       padding-inline-start: 10px;
