@@ -12,6 +12,19 @@
   background-color: transparent;
 }
 
+.fixed-nav.fixed {
+  .upper-bar .wrapper .navbar-brand img {
+    width: 60px;
+    transition: var(--transition);
+  }
+
+  .upper-bar,
+  .nav-bar {
+    padding-bottom: 0;
+    transition: var(--transition);
+  }
+}
+
 /* UPPER BAR  */
 .upper-bar {
   padding: 8px 0;
@@ -19,6 +32,7 @@
   border: 1px solid var(--primary-color);
   color: #fff;
   border-bottom: 1px solid #fff;
+  transition: var(--transition);
   /* display: none; */
 }
 
@@ -148,6 +162,7 @@
   background-color: #fff;
   color: var(--text-color);
   padding: 10px 0;
+  transition: var(--transition);
 }
 
 .nav-bar .nav-flex {
@@ -159,6 +174,7 @@
 
 .nav-bar .nav-flex .navbar-brand {
   width: 75px;
+  transition: var(--transition);
 }
 
 .nav-bar .nav-flex .navbar-links {

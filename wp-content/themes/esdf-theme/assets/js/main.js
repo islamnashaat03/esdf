@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
         upBtn.classList.remove('active');
       }
     }
+    if (menu) {
+      if (window.scrollY > 100) {
+        menu.classList.add('fixed');
+      } else {
+        menu.classList.remove('fixed');
+      }
+    }
+
   });
 
 });
