@@ -43,8 +43,8 @@ if (!defined('ABSPATH')) {
               <ul class="social-links">
                 <?php if ( have_rows('social_accounts', 'option') ) : ?>
                   <?php while ( have_rows('social_accounts', 'option') ) : the_row(); 
-                    $icon = get_sub_field('social_icon');
-                    $link = get_sub_field('social_link');
+                    $icon =  get_sub_field('social_icon');
+                    $link =  get_sub_field('social_link');
                   ?>
                     <?php if ( $icon && $link ) : ?>
                       <li class="social-link">
