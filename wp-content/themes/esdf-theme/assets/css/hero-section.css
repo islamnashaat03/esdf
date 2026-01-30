@@ -1,0 +1,9 @@
+.hero-section {
+  min-height: 70vh;
+
+  .hero-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
