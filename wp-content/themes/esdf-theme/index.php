@@ -20,7 +20,7 @@
                 <h1><?php echo get_field('hero_text', 'option'); ?></h1>
                 <?php if (get_field('hero_btn_link', 'option')) : ?>
                     <a href="<?php echo esc_url(get_field('hero_btn_link', 'option')); ?>" class="main-btn">
-                        <?php lang_in('Join Us', 'انضم الينا'); ?>
+                        <?php lang_in('Take care of your feet', ' اعتن بقدمك'); ?>
                     </a>
                 <?php endif; ?>
             </div>

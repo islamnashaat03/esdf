@@ -38,13 +38,13 @@ add_filter('show_admin_bar', '__return_false');
 function lang_in($en, $ar){
     if(defined('ICL_LANGUAGE_CODE')) {
         if(ICL_LANGUAGE_CODE == 'ar'){
-            return $ar;
+            echo  $ar;
         } elseif (ICL_LANGUAGE_CODE == 'en'){
-            return $en;
+            echo $en;
         }
     } else {
         // Fallback or default behavior if WPML/Polylang not active
-        return $en; 
+        echo $en; 
     }
 }
 add_filter( 'auto_update_plugin', '__return_true' );
