@@ -33,7 +33,7 @@
             <div class="wrapper">
                 <div class="content">
                     <h2><?php echo get_field('about_title', 'option'); ?></h2>
-                    <div><?php echo get_field('about_text', 'option'); ?></div>
+                    <div class="text"><?php echo get_field('about_text', 'option'); ?></div>
                 </div>
                 <div class="image">
                     <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">

@@ -129,6 +129,7 @@ ul {
   position: relative;
   border-radius: 8px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .main-btn span {
@@ -137,9 +138,22 @@ ul {
   /* font-size: 12px; */
 }
 
-.main-btn:hover {
-  transition: var(--transition);
-  background: var(--primary-color);
+.main-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  inset-inline-start: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg, transparent, transparent 30%, #ffffffbd);
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.main-btn:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(300%);
 }
 
 .main-btn.reversed {
