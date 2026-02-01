@@ -1,7 +1,7 @@
 .about {
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax((calc(100% / 2) - 30px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 
     .content {
