@@ -10,6 +10,7 @@
   width: 100%;
   z-index: 99;
   background-color: transparent;
+  transition: var(--transition);
 }
 
 .fixed-nav.fixed {

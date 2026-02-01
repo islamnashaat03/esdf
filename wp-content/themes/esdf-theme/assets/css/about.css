@@ -1,0 +1,15 @@
+.about {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax((calc(100% / 2) - 30px), 1fr));
+    gap: 20px;
+
+    .content {
+      h2 {
+        font-size: clamp(24px, 4vw, 40px);
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
