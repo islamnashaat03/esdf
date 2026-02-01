@@ -44,6 +44,17 @@ section {
   padding: 50px 0;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: inherit;
+}
+
 .image-wrap img,
 .image-wrap video {
   width: 100%;
@@ -164,16 +175,7 @@ ul {
   transition: var(--transition);
 }
 
-/* Links */
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-}
 
-a:hover {
-  color: var(--secondary-color);
-}
 
 .toggle-btn {
   display: flex;
