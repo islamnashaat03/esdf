@@ -76,14 +76,6 @@ if (!defined('ABSPATH')) {
             'container' => false,
             'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
           )); ?>
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand mobile-logo">
-            <!-- LOGO -->
-            <?php
-            $logo = get_field('site_logo', 'option');
-            if ($logo) : ?>
-              <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
-            <?php endif; ?>
-          </a>
           <div class="icons">
             <?php if (defined('ICL_LANGUAGE_CODE')): ?>
               <a class="languages" href="<?php echo esc_url(ICL_LANGUAGE_CODE === 'ar' ? '/en' : '/ar'); ?>">

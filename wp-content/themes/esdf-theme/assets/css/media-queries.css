@@ -2,6 +2,7 @@
 
   .nav-bar {
     .nav-flex {
+      gap: 30px;
 
       .menu-btn {
         display: none;
@@ -22,7 +23,13 @@
 
 }
 
-@media screen and (max-width:1199px) {}
+@media screen and (max-width:1199px) {
+  .nav-bar {
+    .nav-flex {
+      gap: 15px;
+    }
+  }
+}
 
 @media screen and (max-width:991px) {
   .nav-bar {
