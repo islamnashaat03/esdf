@@ -13,8 +13,8 @@
                 <img src="<?php echo esc_url(get_field('hero_img', 'option')); ?>" alt="Hero Image">
             </div>
         <?php endif; ?>
-        <div class="container">
-            <div class="hero-content">
+        <div class="hero-content">
+            <div class="container">
                 <h1><?php echo get_field('hero_title', 'option'); ?></h1>
                 <p><?php echo get_field('hero_text', 'option'); ?></p>
                 <a href="#" class="main-btn"><?php echo get_field('hero_button_text', 'option'); ?></a>
