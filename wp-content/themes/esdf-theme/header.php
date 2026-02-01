@@ -63,6 +63,14 @@ if (!defined('ABSPATH')) {
     <div class="nav-bar wow fadeInDown">
       <div class="container">
         <nav class="nav-flex">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand">
+            <!-- LOGO -->
+            <?php
+            $logo = get_field('site_logo', 'option');
+            if ($logo) : ?>
+              <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>">
+            <?php endif; ?>
+          </a>
           <?php wp_nav_menu(array(
             'theme_location' => 'main_menu',
             'container' => false,

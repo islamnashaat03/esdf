@@ -20,7 +20,7 @@
                 <a href="#" class="main-btn"><?php echo get_field('hero_button_text', 'option'); ?></a>
             </div>
         </div>
-    </section>   
+    </section>
 </main>
 
 <?php get_footer(); ?>
