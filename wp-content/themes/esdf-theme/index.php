@@ -53,7 +53,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="image">
+                <div data-aos="fade-up" data-aos-delay="500" class="image">
                     <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">
                 </div>
             </div>
