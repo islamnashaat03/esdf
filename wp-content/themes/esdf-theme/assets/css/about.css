@@ -12,5 +12,30 @@
         color: var(--primary-color);
       }
     }
+
+    .numbers {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+      li {
+        background-color: #fff;
+        box-shadow: 0 0 3px 3px #0000001f;
+        padding: 20px;
+        border-radius: 10px;
+
+        .number {
+          font-size: clamp(24px, 4vw, 40px);
+          font-weight: 700;
+          color: var(--primary-color);
+        }
+
+        .text {
+          font-size: clamp(16px, 4vw, 20px);
+          font-weight: 700;
+          color: var(--text-color);
+        }
+      }
+    }
   }
 }

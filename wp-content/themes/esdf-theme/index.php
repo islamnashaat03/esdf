@@ -16,10 +16,10 @@
         <?php endif; ?>
         <div class="hero-content">
             <div class="container">
-                <h2><?php echo get_field('hero_title', 'option'); ?></h2>
-                <h1><?php echo get_field('hero_text', 'option'); ?></h1>
+                <h2 data-aos="fade-up" data-aos-delay="100"><?php echo get_field('hero_title', 'option'); ?></h2>
+                <h1 data-aos="fade-up" data-aos-delay="200"><?php echo get_field('hero_text', 'option'); ?></h1>
                 <?php if (get_field('hero_btn_link', 'option')) : ?>
-                    <a href="<?php echo esc_url(get_field('hero_btn_link', 'option')); ?>" class="main-btn">
+                    <a data-aos="fade-up" data-aos-delay="300" href="<?php echo esc_url(get_field('hero_btn_link', 'option')); ?>" class="main-btn">
                         <?php lang_in('Take care of your feet', ' اعتن بقدمك'); ?>
                     </a>
                 <?php endif; ?>
@@ -32,8 +32,8 @@
         <div class="container">
             <div class="wrapper">
                 <div class="content">
-                    <h2><?php echo get_field('about_title', 'option'); ?></h2>
-                    <div class="text"><?php echo get_field('about_text', 'option'); ?></div>
+                    <h2 data-aos="fade-up" data-aos-delay="100"><?php echo get_field('about_title', 'option'); ?></h2>
+                    <div class="text" data-aos="fade-up" data-aos-delay="200"><?php echo get_field('about_text', 'option'); ?></div>
                     <ul class="numbers">
                         <li data-aos="fade-up" data-aos-delay="100">
                             <div class="number">15+</div>
@@ -41,15 +41,15 @@
                         </li>
                         <li data-aos="fade-up" data-aos-delay="200">
                             <div class="number">500+</div>
-                            <div class="text"><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
+                            <div class="text" ><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="300">
                             <div class="number">16+</div>
-                            <div class="text"><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
+                            <div class="text" ><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="400">
                             <div class="number">3M</div>
-                            <div class="text"><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
+                            <div class="text" ><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
                         </li>
                     </ul>
                 </div>
