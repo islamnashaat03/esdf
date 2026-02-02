@@ -18,6 +18,10 @@
 
     }
 
+    .image {
+      margin: auto;
+    }
+
     .numbers {
       display: grid;
       gap: 20px;
