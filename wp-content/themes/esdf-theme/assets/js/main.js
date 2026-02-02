@@ -77,5 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   });
-
+  const upBtn = document.querySelector('.up');
+  upBtn.onclick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 });

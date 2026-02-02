@@ -16,10 +16,10 @@
         <?php endif; ?>
         <div class="hero-content">
             <div class="container">
-                <h2 data-aos="fade-up" data-aos-delay="100"><?php echo get_field('hero_title', 'option'); ?></h2>
-                <h1 data-aos="fade-up" data-aos-delay="200"><?php echo get_field('hero_text', 'option'); ?></h1>
+                <h2 data-aos="fade-up" data-aos-delay="50"><?php echo get_field('hero_title', 'option'); ?></h2>
+                <h1 data-aos="fade-up" data-aos-delay="100"><?php echo get_field('hero_text', 'option'); ?></h1>
                 <?php if (get_field('hero_btn_link', 'option')) : ?>
-                    <a data-aos="fade-up" data-aos-delay="300" href="<?php echo esc_url(get_field('hero_btn_link', 'option')); ?>" class="main-btn">
+                    <a data-aos="fade-up" data-aos-delay="150" href="<?php echo esc_url(get_field('hero_btn_link', 'option')); ?>" class="main-btn">
                         <?php lang_in('Take care of your feet', ' اعتن بقدمك'); ?>
                     </a>
                 <?php endif; ?>
