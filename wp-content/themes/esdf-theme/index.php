@@ -48,7 +48,7 @@
                             <div class="text" ><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <div class="number">3M</div>
+                            <div class="number">3M+</div>
                             <div class="text" ><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
                         </li>
                     </ul>

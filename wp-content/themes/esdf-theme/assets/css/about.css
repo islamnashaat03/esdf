@@ -11,12 +11,17 @@
         margin-bottom: 20px;
         color: var(--primary-color);
       }
+
+      .text {
+        margin-bottom: 40px;
+      }
+
     }
 
     .numbers {
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
       li {
         background-color: #fff;
@@ -25,15 +30,17 @@
         border-radius: 10px;
 
         .number {
-          font-size: clamp(24px, 4vw, 40px);
+          font-size: clamp(24px, 4vw, 35px);
           font-weight: 700;
           color: var(--primary-color);
+          line-height: 1.2;
         }
 
         .text {
-          font-size: clamp(16px, 4vw, 20px);
-          font-weight: 700;
+          font-size: clamp(14px, 4vw, 16px);
+          font-weight: 400;
           color: var(--text-color);
+          margin: 0;
         }
       }
     }
