@@ -34,6 +34,24 @@
                 <div class="content">
                     <h2><?php echo get_field('about_title', 'option'); ?></h2>
                     <div class="text"><?php echo get_field('about_text', 'option'); ?></div>
+                    <ul class="numbers">
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <div class="number">15+</div>
+                            <div class="text"><?php lang_in('Years of Experience', 'سنوات من الخبرة'); ?></div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <div class="number">500+</div>
+                            <div class="text"><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <div class="number">16+</div>
+                            <div class="text"><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="400">
+                            <div class="number">3M</div>
+                            <div class="text"><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="image">
                     <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">

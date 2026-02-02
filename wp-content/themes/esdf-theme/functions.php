@@ -21,6 +21,10 @@ function esdf_enqueue_scripts()
 {
     // Enqueue FontAwesome
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1');
+    // Enqueue AOS
+    wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), '2.3.1');
+    wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
+
     // Enqueue Dashicons
     wp_enqueue_style('dashicons');
     // Enqueue the main stylesheet from assets/css/

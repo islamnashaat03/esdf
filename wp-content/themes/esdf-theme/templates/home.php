@@ -77,9 +77,11 @@ $partners = get_field('partners_logos', 'option');
 				));
 
 				if($news_query->have_posts()) :
+					$delay = 100;
 					while($news_query->have_posts()) : $news_query->the_post();
 						?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class('news-card'); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class('news-card'); ?> data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
+						<?php $delay += 100; ?>
 							<?php if(has_post_thumbnail()): ?>
 								<div class="news-thumbnail">
 									<a href="<?php the_permalink(); ?>">
@@ -115,8 +117,11 @@ $partners = get_field('partners_logos', 'option');
 			<div class="container">
 				<h2 class="section-title text-center"><?php echo lang_in('Our Partners', 'شركاؤنا'); ?></h2>
 				<div class="partners-grid">
-					<?php foreach($partners as $partner): ?>
-						<div class="partner-item">
+					<?php 
+					$p_delay = 100;
+					foreach($partners as $partner): ?>
+						<div class="partner-item" data-aos="fade-up" data-aos-delay="<?php echo $p_delay; ?>">
+						<?php $p_delay += 100; ?>
 							<?php if($partner['url']): ?>
 								<a href="<?php echo esc_url($partner['url']); ?>" target="_blank" rel="noopener noreferrer">
 							<?php endif; ?>

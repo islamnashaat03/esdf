@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+
   const menuBtn = document.querySelector('.toggle-btn');
   const closeMenuBtn = document.querySelector('.navbar-close-btn');
   const mobileMenu = document.querySelector('.navbar-mobile');
