@@ -118,10 +118,10 @@ get_header();
                     <?php 
                     if( have_rows('board_members', 'option') ):
                         while( have_rows('board_members', 'option') ): the_row();
-                            $name = get_sub_field('name');
-                            $role = get_sub_field('role');
-                            $specialty = get_sub_field('specialty');
-                            $image = get_sub_field('image');
+                            $name = get_sub_field('member_name');
+                            $role = get_sub_field('member_role');
+                            $specialty = get_sub_field('member_specialty');
+                            $image = get_sub_field('member_image');
                             ?>
                             <div class="member-card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="member-img">
@@ -136,27 +136,7 @@ get_header();
                                 <span class="specialty"><?php echo esc_html($specialty); ?></span>
                             </div>
                         <?php endwhile;
-                    else:
-                        // Fallback Content
-                        $board = [
-                            ['name' => 'Prof. Ahmed Hassan', 'role' => 'President', 'specialty' => 'Endocrinology'],
-                            ['name' => 'Dr. Fatima El-Sayed', 'role' => 'Vice President', 'specialty' => 'Vascular Surgery'],
-                            ['name' => 'Dr. Mohamed Ibrahim', 'role' => 'Secretary General', 'specialty' => 'Diabetology'],
-                            ['name' => 'Dr. Laila Mahmoud', 'role' => 'Treasurer', 'specialty' => 'Internal Medicine'],
-                            ['name' => 'Prof. Khaled Abdel-Rahman', 'role' => 'Board Member', 'specialty' => 'Orthopedic Surgery'],
-                            ['name' => 'Dr. Nadia Farouk', 'role' => 'Board Member', 'specialty' => 'Podiatry']
-                        ];
-                        foreach($board as $member): ?>
-                            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
-                                <div class="member-img">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                                <h3><?php echo esc_html($member['name']); ?></h3>
-                                <span class="role"><?php echo esc_html($member['role']); ?></span>
-                                <span class="specialty"><?php echo esc_html($member['specialty']); ?></span>
-                            </div>
-                        <?php endforeach;
-                    endif; ?>
+                    endif; ?>   
                 </div>
             </div>
         </section>
