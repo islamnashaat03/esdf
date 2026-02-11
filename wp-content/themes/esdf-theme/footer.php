@@ -58,6 +58,15 @@
 				?>
 			</div>
 		</div>
+		<div class="copyright">
+				<?php 
+				if($copyright_text) {
+					echo esc_html($copyright_text);
+				} else {
+					echo '&copy; ' . date('Y') . ' ' . esc_html(get_bloginfo('name')) . '. ' . lang_in('All Rights Reserved.', 'جميع الحقوق محفوظة.');
+				}
+				?>
+			</div>
 	</div>
 </footer>
 
