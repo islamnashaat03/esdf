@@ -14,28 +14,12 @@ get_header();
 
 <main id="main" class="site-main">
 	<div class="custom-page about-page">
-		<!-- START ABOUT SECTION  -->
-		<section class="about">
-			<div class="container">
-				<div class="wrapper">
-					<div class="content">
-						<h2><?php echo get_field('about_title', 'option'); ?></h2>
-                        <div class="text"><?php echo get_field('about_text', 'option'); ?></div>
-                    </div>
-                    <div class="image">
-                        <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">
-                    </div>
-                </div>
-            </div>
-		</section>
-		<!-- END ABOUT SECTION  -->
-
-        <!-- START VISION & MISSION SECTION -->
+                <!-- START VISION & MISSION SECTION -->
         <section class="vision-mission">
             <div class="container">
                 <div class="wrapper">
                     <!-- Vision -->
-                    <div class="vm-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vm-card" data-aos="fade-up" data-aos-delay="50">
                         <div class="icon-box">
                             <i class="fa-solid fa-eye"></i>
                         </div>
@@ -43,7 +27,7 @@ get_header();
                         <p><?php echo get_field('vision_text', 'option') ? get_field('vision_text', 'option') : 'To be the leading authority in diabetic foot care in Egypt and the region, recognized for excellence in prevention, treatment, research, and education.'; ?></p>
                     </div>
                     <!-- Mission -->
-                    <div class="vm-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vm-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <i class="fa-solid fa-bullseye"></i> <!-- Fallback if no icon field -->
                         </div>
@@ -54,54 +38,67 @@ get_header();
             </div>
         </section>
         <!-- END VISION & MISSION SECTION -->
+		<!-- START ABOUT SECTION  -->
+    <section class="about">
+        <div class="container">
+            <div class="wrapper">
+                <div class="content">
+                    <h2 data-aos="fade-up" data-aos-delay="50"><?php echo get_field('about_title', 'option'); ?></h2>
+                    <div class="text" data-aos="fade-up" data-aos-delay="100"><?php echo get_field('about_text', 'option'); ?></div>
+                    <ul class="numbers">
+                        <li data-aos="fade-up" data-aos-delay="50">
+                            <div class="number">15+</div>
+                            <div class="text"><?php lang_in('Years of Experience', 'سنوات من الخبرة'); ?></div>
+                        </li>       
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <div class="number">500+</div>
+                            <div class="text" ><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="150">
+                            <div class="number">16+</div>
+                            <div class="text" ><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <div class="number">3M+</div>
+                            <div class="text" ><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="250" class="image">
+                    <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+		<!-- END ABOUT SECTION  -->
 
         <!-- START OBJECTIVES SECTION -->
         <section class="objectives">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2><?php echo get_field('objectives_title', 'option') ? get_field('objectives_title', 'option') : 'Our Objectives'; ?></h2>
-                    <div class="text"><?php echo get_field('objectives_desc', 'option') ? get_field('objectives_desc', 'option') : 'ESDF is committed to achieving excellence in diabetic foot care through these key objectives'; ?></div>
+                    <h2><?php echo get_field('objective_title', 'option') ?></h2>
+                    <div class="text"><?php echo get_field('objective_text', 'option') ?></div>
                 </div>
                 <div class="wrapper">
                     <?php 
                     if( have_rows('objectives_list', 'option') ):
                         while( have_rows('objectives_list', 'option') ): the_row();
-                            $title = get_sub_field('title');
-                            $text = get_sub_field('text');
-                            $icon_class = get_sub_field('icon_class'); // Expecting class like 'fa-shield-halved'
+                            $title = get_sub_field('objectives_list_title');
+                            $text = get_sub_field('objectives_list_text');
+                            $icon_class = get_sub_field('objectives_list_icon_class'); // Expecting class like 'fa-shield-halved'
                             ?>
                             <div class="objective-card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="icon-box">
-                                    <i class="fa-solid <?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
+                                    <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
                                 </div>
                                 <div class="content">
                                     <h3><?php echo esc_html($title); ?></h3>
                                     <p><?php echo esc_html($text); ?></p>
                                 </div>
                             </div>
-                        <?php endwhile;
-                    else:
-                        // Fallback Content
-                        $objectives = [
-                            ['title' => 'Prevention & Early Detection', 'text' => 'Promote early detection of diabetic foot complications.', 'icon' => 'fa-shield-halved'],
-                            ['title' => 'Education & Awareness', 'text' => 'Provide comprehensive educational programs for healthcare professionals.', 'icon' => 'fa-book-open'],
-                            ['title' => 'Research & Innovation', 'text' => 'Conduct and support scientific research to advance knowledge.', 'icon' => 'fa-microscope'],
-                            ['title' => 'Professional Development', 'text' => 'Offer training workshops and continuing education opportunities.', 'icon' => 'fa-user-doctor'],
-                            ['title' => 'Clinical Excellence', 'text' => 'Establish and promote best practices and clinical guidelines.', 'icon' => 'fa-hospital'],
-                            ['title' => 'Collaboration & Networking', 'text' => 'Foster collaboration among healthcare professionals.', 'icon' => 'fa-globe']
-                        ];
-                        foreach($objectives as $obj): ?>
-                            <div class="objective-card" data-aos="fade-up" data-aos-delay="100">
-                                <div class="icon-box">
-                                    <i class="fa-solid <?php echo $obj['icon']; ?>"></i>
-                                </div>
-                                <div class="content">
-                                    <h3><?php echo esc_html($obj['title']); ?></h3>
-                                    <p><?php echo esc_html($obj['text']); ?></p>
-                                </div>
-                            </div>
-                        <?php endforeach;
-                    endif; ?>
+                        <?php endwhile; 
+                        endif; ?>
                 </div>
             </div>
         </section>
@@ -111,8 +108,8 @@ get_header();
         <section class="board-members">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2><?php echo get_field('board_title', 'option') ? get_field('board_title', 'option') : 'Board of Directors'; ?></h2>
-                    <div class="text"><?php echo get_field('board_desc', 'option') ? get_field('board_desc', 'option') : 'Our distinguished board members bring decades of experience in diabetic foot care and medical research'; ?></div>
+                    <h2><?php echo get_field('board_title', 'option'); ?></h2>
+                    <div class="text"><?php echo get_field('board_desc', 'option'); ?></div>
                 </div>
                 <div class="wrapper">
                     <?php 
