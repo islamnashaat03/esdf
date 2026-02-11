@@ -162,10 +162,10 @@ get_header();
                     <?php 
                     $j = 50;
                     // Reimplements group logic similarly
-                    if( have_rows('about_page_group') ):
-                        while( have_rows('about_page_group') ): the_row();
-                             if( have_rows('board_members') ):
-                                while( have_rows('board_members') ): the_row();
+                    if( have_rows('about_page_group' , 'option') ):
+                        while( have_rows('about_page_group' , 'option') ): the_row();
+                             if( have_rows('board_members' , 'option') ):
+                                while( have_rows('board_members' , 'option') ): the_row();
                                     $name = get_sub_field('member_name');
                                     $role = get_sub_field('member_role');
                                     $specialty = get_sub_field('member_specialty');
