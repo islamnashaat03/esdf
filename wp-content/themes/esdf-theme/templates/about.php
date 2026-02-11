@@ -118,10 +118,10 @@ get_header();
                     <?php 
                     if( have_rows('board_members', 'option') ):
                         while( have_rows('board_members', 'option') ): the_row();
-                            $name = get_sub_field('member_name');
-                            $role = get_sub_field('member_role');
-                            $specialty = get_sub_field('member_specialty');
-                            $image = get_sub_field('member_image');
+                            $name = get_sub_field('member_name' , 'option');
+                            $role = get_sub_field('member_role' , 'option');
+                            $specialty = get_sub_field('member_specialty' , 'option');
+                            $image = get_sub_field('member_image' , 'option');
                             ?>
                             <div class="member-card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="member-img">
