@@ -4,13 +4,7 @@
  *
  * @package ESDF_Theme
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 ?>
-
 <footer class="footer">
 	<div class="container">
 		<div class="wrapper">

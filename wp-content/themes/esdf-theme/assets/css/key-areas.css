@@ -2,7 +2,8 @@
 .key-areas {
     padding: 60px 0;
     text-align: center;
-    background-color: #fff; /* Assuming white background */
+    background-color: #fff;
+    /* Assuming white background */
 
     .section-header {
         margin-bottom: 50px;
@@ -13,22 +14,23 @@
         h2 {
             font-size: clamp(24px, 4vw, 40px);
             font-weight: 700;
-            color: var(--primary-color, #000); /* Fallback to black if var not defined */
+            color: var(--primary-color, #000);
+            /* Fallback to black if var not defined */
             margin-bottom: 20px;
         }
 
-        p {
+        .text {
             font-size: clamp(14px, 3vw, 18px);
             color: var(--text-color, #666);
             line-height: 1.6;
         }
     }
 
-    .key-areas-grid {
+    .wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
-        
+
         /* Ensure 4 columns on large screens if there are 4 items */
         @media (min-width: 1200px) {
             grid-template-columns: repeat(4, 1fr);
@@ -40,7 +42,8 @@
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        text-align: left; /* Content aligns left as per screenshot */
+        text-align: left;
+        /* Content aligns left as per screenshot */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 1px solid #f0f0f0;
         display: flex;
@@ -55,14 +58,17 @@
         .icon-box {
             width: 60px;
             height: 60px;
-            background-color: var(--secondary-color, #3498db); /* Blue color from screenshot */
+            background-color: var(--secondary-color, #3498db);
+            /* Blue color from screenshot */
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 25px;
 
-            img, svg, i {
+            img,
+            svg,
+            i {
                 width: 30px;
                 height: 30px;
                 object-fit: contain;
@@ -83,7 +89,8 @@
             color: var(--text-color, #666);
             line-height: 1.6;
             margin-bottom: 25px;
-            flex-grow: 1; /* Pushes the link to the bottom */
+            flex-grow: 1;
+            /* Pushes the link to the bottom */
         }
 
         .learn-more {

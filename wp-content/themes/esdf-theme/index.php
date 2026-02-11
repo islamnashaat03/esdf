@@ -69,7 +69,51 @@
                 <div class="text"><?php echo get_field('key_areas_text', 'option'); ?></div>
             </div>
             <div class="wrapper">
-                
+                <?php 
+                if (have_rows('key_areas_list', 'option')):
+                    while (have_rows('key_areas_list', 'option')) : the_row();
+                        $icon = get_sub_field('icon');
+                        $title = get_sub_field('title');
+                        $desc = get_sub_field('description');
+                        $link = get_sub_field('link');
+                        ?>
+                        <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-box">
+                                <?php if ($icon): ?>
+                                    <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>">
+                                <?php else: ?>
+                                    <i class="fa-solid fa-star"></i> <!-- Fallback icon -->
+                                <?php endif; ?>
+                            </div>
+                            <h3><?php echo esc_html($title); ?></h3>
+                            <p><?php echo esc_html($desc); ?></p>
+                            <a href="<?php echo esc_url($link); ?>" class="learn-more">
+                                <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    <?php endwhile;
+                else: 
+                    // Fallback content for visualization if no fields are set
+                    $fallback_cards = [
+                        ['title' => 'Scientific Activities', 'desc' => 'Conducting cutting-edge research and publishing findings in peer-reviewed journals.', 'icon' => 'fa-microscope'],
+                        ['title' => 'Conferences & Events', 'desc' => 'Annual national conferences bringing together healthcare professionals.', 'icon' => 'fa-chalkboard-user'],
+                        ['title' => 'Educational Programs', 'desc' => 'Comprehensive training workshops and educational materials.', 'icon' => 'fa-graduation-cap'],
+                        ['title' => 'Membership', 'desc' => 'Join our community of dedicated healthcare professionals.', 'icon' => 'fa-users']
+                    ];
+                    foreach ($fallback_cards as $card): ?>
+                        <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-box">
+                                <i class="fa-solid <?php echo $card['icon']; ?>"></i>
+                            </div>
+                            <h3><?php echo esc_html($card['title']); ?></h3>
+                            <p><?php echo esc_html($card['desc']); ?></p>
+                            <a href="#" class="learn-more">
+                                <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    <?php endforeach;
+                endif; 
+                ?>
             </div>
         </div>
 
