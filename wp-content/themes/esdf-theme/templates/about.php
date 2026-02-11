@@ -77,18 +77,20 @@ get_header();
         <section class="objectives">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2><?php echo get_field('objective_title', 'option') ?></h2>
-                    <div class="text"><?php echo get_field('objective_text', 'option') ?></div>
+                    <h2><?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: 'Our Objectives'); ?></h2>
+                    <div class="text"><?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: 'ESDF is committed to achieving excellence in diabetic foot care through these key objectives'); ?></div>
                 </div>
                 <div class="wrapper">
                     <?php 
-                    if( have_rows('objectives_list', 'option') ):
-                        while( have_rows('objectives_list', 'option') ): the_row();
+                    // Try page fields first, then option
+                    if( have_rows('objectives_list') ):
+                        while( have_rows('objectives_list') ): the_row();
+                            $i = 50;
                             $title = get_sub_field('objectives_list_title');
                             $text = get_sub_field('objectives_list_text');
-                            $icon_class = get_sub_field('objectives_list_icon_class'); // Expecting class like 'fa-shield-halved'
+                            $icon_class = get_sub_field('objectives_list_icon_class'); 
                             ?>
-                            <div class="objective-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                 <div class="icon-box">
                                     <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
                                 </div>
@@ -97,8 +99,27 @@ get_header();
                                     <p><?php echo esc_html($text); ?></p>
                                 </div>
                             </div>
+                            <?php $i += 50; ?>
                         <?php endwhile; 
-                        endif; ?>
+                    elseif( have_rows('objectives_list', 'option') ):
+                         while( have_rows('objectives_list', 'option') ): the_row();
+                            $i = 50;
+                            $title = get_sub_field('objectives_list_title');
+                            $text = get_sub_field('objectives_list_text');
+                            $icon_class = get_sub_field('objectives_list_icon_class'); 
+                            ?>
+                            <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
+                                <div class="icon-box">
+                                    <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
+                                </div>
+                                <div class="content">
+                                    <h3><?php echo esc_html($title); ?></h3>
+                                    <p><?php echo esc_html($text); ?></p>
+                                </div>
+                            </div>
+                            <?php $i += 50; ?>
+                        <?php endwhile;
+                    endif; ?>
                 </div>
             </div>
         </section>
@@ -107,18 +128,43 @@ get_header();
         <!-- START BOARD OF MEMBERS SECTION -->
         <section class="board-members">
             <div class="container">
+                <?php 
+                $board_title = get_field('board_title') ?: get_field('board_title', 'option');
+                $board_desc = get_field('board_desc') ?: get_field('board_desc', 'option');
+                if($board_title): ?>
                 <div class="section-header" data-aos="fade-up">
-                    <h2><?php echo get_field('board_title', 'option'); ?></h2>
-                    <div class="text"><?php echo get_field('board_desc', 'option'); ?></div>
+                    <h2><?php echo esc_html($board_title); ?></h2>
+                    <div class="text"><?php echo esc_html($board_desc); ?></div>
                 </div>
+                <?php endif; ?>
                 <div class="wrapper">
                     <?php 
-                    if( have_rows('board_members', 'option') ):
+                    if( have_rows('board_members') ):
+                        while( have_rows('board_members') ): the_row();
+                            $name = get_sub_field('member_name');
+                            $role = get_sub_field('member_role');
+                            $specialty = get_sub_field('member_specialty');
+                            $image = get_sub_field('member_image');
+                            ?>
+                            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="member-img">
+                                    <?php if($image): ?>
+                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($name); ?>">
+                                    <?php else: ?>
+                                        <i class="fa-solid fa-user"></i>
+                                    <?php endif; ?>
+                                </div>
+                                <h3><?php echo esc_html($name); ?></h3>
+                                <span class="role"><?php echo esc_html($role); ?></span>
+                                <span class="specialty"><?php echo esc_html($specialty); ?></span>
+                            </div>
+                        <?php endwhile;
+                    elseif( have_rows('board_members', 'option') ):
                         while( have_rows('board_members', 'option') ): the_row();
-                            $name = get_sub_field('member_name' , 'option');
-                            $role = get_sub_field('member_role' , 'option');
-                            $specialty = get_sub_field('member_specialty' , 'option');
-                            $image = get_sub_field('member_image' , 'option');
+                            $name = get_sub_field('member_name');
+                            $role = get_sub_field('member_role');
+                            $specialty = get_sub_field('member_specialty');
+                            $image = get_sub_field('member_image');
                             ?>
                             <div class="member-card" data-aos="fade-up" data-aos-delay="100">
                                 <div class="member-img">
