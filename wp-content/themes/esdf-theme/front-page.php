@@ -32,4 +32,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wp_footer(); ?>
 </body>
+
+<style>
+    .coming-soon-container {
+           background: #000;
+    height: 100%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+    }
+    .coming-soon-container .content {
+        text-align: center;
+    }
+    .coming-soon-container .content h2 {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+</style>
 </html>

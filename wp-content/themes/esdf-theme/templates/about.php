@@ -131,73 +131,7 @@ get_header();
         <!-- END OBJECTIVES SECTION -->
 
         <!-- START BOARD OF MEMBERS SECTION -->
-        <section class="board-members">
-            <div class="container">
-                <?php 
-                $board_title = get_field('board_title') ?: get_field('board_title', 'option');
-                $board_desc = get_field('board_desc') ?: get_field('board_desc', 'option');
-                if($board_title): ?>
-                <div class="section-header" data-aos="fade-up">
-                    <h2><?php echo esc_html($board_title); ?></h2>
-                    <div class="text"><?php echo esc_html($board_desc); ?></div>
-                </div>
-                <?php endif; ?>
-                <div class="wrapper">
-                    <?php 
-                    $j = 50;
-                    // Case 1: Fields inside a Group on Options Page (Primary per user request)
-                    if( have_rows('about_page_group', 'option') ):
-                        while( have_rows('about_page_group', 'option') ): the_row();
-                            // Inside the group, we check for repeater WITHOUT 'option'
-                             if( have_rows('board_members') ):
-                                while( have_rows('board_members') ): the_row();
-                                    $name = get_sub_field('member_name');
-                                    $role = get_sub_field('member_role');
-                                    $specialty = get_sub_field('member_specialty');
-                                    $image = get_sub_field('member_image');
-                                    ?>
-                                    <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $j; ?>">
-                                        <div class="member-img">
-                                            <?php if($image): ?>
-                                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($name); ?>">
-                                            <?php else: ?>
-                                                <i class="fa-solid fa-user"></i>
-                                            <?php endif; ?>
-                                        </div>
-                                        <h3><?php echo esc_html($name); ?></h3>
-                                        <span class="role"><?php echo esc_html($role); ?></span>
-                                        <span class="specialty"><?php echo esc_html($specialty); ?></span>
-                                    </div>
-                                    <?php $j += 50; ?>
-                                <?php endwhile;
-                            endif;
-                        endwhile;
-                    // Case 2: Repeater directly on Options Page (Fallback if not in group)
-                    elseif( have_rows('board_members', 'option') ):
-                        while( have_rows('board_members', 'option') ): the_row();
-                            $name = get_sub_field('member_name');
-                            $role = get_sub_field('member_role');
-                            $specialty = get_sub_field('member_specialty');
-                            $image = get_sub_field('member_image');
-                            ?>
-                            <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $j; ?>">
-                                <div class="member-img">
-                                    <?php if($image): ?>
-                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($name); ?>">
-                                    <?php else: ?>
-                                        <i class="fa-solid fa-user"></i>
-                                    <?php endif; ?>
-                                </div>
-                                <h3><?php echo esc_html($name); ?></h3>
-                                <span class="role"><?php echo esc_html($role); ?></span>
-                                <span class="specialty"><?php echo esc_html($specialty); ?></span>
-                            </div>
-                            <?php $j += 50; ?>
-                        <?php endwhile;
-                    endif; ?>   
-                </div>
-            </div>
-        </section>
+
         <!-- END BOARD OF MEMBERS SECTION -->
 
 	</div>
