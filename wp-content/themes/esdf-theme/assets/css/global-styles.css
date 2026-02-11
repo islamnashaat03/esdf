@@ -23,7 +23,6 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.6;
   background: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
@@ -66,6 +65,12 @@ img {
   max-width: 100%;
 }
 
+.text {
+  line-height: 1.6;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
 .btn {
   border: none;
   outline: none;
@@ -102,6 +107,7 @@ ul {
   color: #fff;
   cursor: pointer;
   transition: var(--transition);
+  border: 1px solid #fff;
 }
 
 .up.active {

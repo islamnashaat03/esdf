@@ -66,6 +66,15 @@
   background-color: var(--secondary-color);
 }
 
+.footer .social-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
 .footer .copyright {
   text-align: center;
   margin-top: 50px;
