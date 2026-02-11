@@ -119,5 +119,14 @@
 
     </section>
     <!-- END KEY AREAS SECTION  --> 
+     <!-- START CONTACT SECTION  -->
+     <section class="members-board">
+        <div class="container">
+           <div class="wrapper">
+            
+           </div>
+        </div>
+    </section>
+    <!-- END CONTACT SECTION  -->
 </main>
 <?php get_footer(); ?>
