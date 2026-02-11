@@ -1,3 +1,66 @@
-footer {
-  display: none;
+.footer {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.footer .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.footer .wrapper .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer .wrapper .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer .wrapper .logo .text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer .wrapper .logo .social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .wrapper .logo .social-links li a {
+  color: white;
+  font-size: 20px;
+}
+
+.footer .wrapper .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer .wrapper .links h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer .wrapper .links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer .wrapper .links ul li a {
+  color: white;
+  font-size: 14px;
+}
+
+.footer .wrapper .links ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.footer .wrapper .links ul li a:hover::before {
+  background-color: var(--secondary-color);
 }

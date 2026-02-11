@@ -61,5 +61,18 @@
 
     </section>
     <!-- END ABOUT SECTION  -->
+             <!-- START KEY AREAS SECTION  -->
+    <section class="key-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2><?php echo get_field('key_areas_title', 'option'); ?></h2>
+                <div class="text"><?php echo get_field('key_areas_text', 'option'); ?></div>
+            </div>
+            <div class="wrapper">
+                
+            </div>
+        </div>
 
+    </section>
+    <!-- END KEY AREAS SECTION  -->       
 <?php get_footer(); ?>

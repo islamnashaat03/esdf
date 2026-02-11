@@ -1,0 +1,109 @@
+/* Key Areas Section Styles */
+.key-areas {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff; /* Assuming white background */
+
+    .section-header {
+        margin-bottom: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        h2 {
+            font-size: clamp(24px, 4vw, 40px);
+            font-weight: 700;
+            color: var(--primary-color, #000); /* Fallback to black if var not defined */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: clamp(14px, 3vw, 18px);
+            color: var(--text-color, #666);
+            line-height: 1.6;
+        }
+    }
+
+    .key-areas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        
+        /* Ensure 4 columns on large screens if there are 4 items */
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .key-area-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        text-align: left; /* Content aligns left as per screenshot */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color, #3498db); /* Blue color from screenshot */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+
+            img, svg, i {
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                color: #fff;
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color, #000);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-color, #666);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1; /* Pushes the link to the bottom */
+        }
+
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--secondary-color, #3498db);
+            text-decoration: none;
+            transition: gap 0.2s ease;
+            gap: 8px;
+
+            i {
+                font-size: 12px;
+                transition: transform 0.2s ease;
+            }
+
+            &:hover {
+                gap: 12px;
+            }
+        }
+    }
+}
