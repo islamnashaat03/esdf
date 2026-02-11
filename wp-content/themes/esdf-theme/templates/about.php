@@ -95,7 +95,7 @@ get_header();
                                     ?>
                                     <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                         <div class="icon-box">
-                                            <?php echo $icon_class ?>
+                                            <?php echo '<i class="' . esc_attr($icon_class) . '"></i>' ?>
                                         </div>
                                         <div class="content">
                                             <h3><?php echo esc_html($title); ?></h3>
