@@ -74,5 +74,6 @@
         </div>
 
     </section>
-    <!-- END KEY AREAS SECTION  -->       
+    <!-- END KEY AREAS SECTION  --> 
+</main>
 <?php get_footer(); ?>
