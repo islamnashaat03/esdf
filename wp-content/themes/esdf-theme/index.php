@@ -1,5 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: home page
+ *
+ * @package ESDF_Theme
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
+?>
 <main id="main-content">
     <!-- START HERO SECTION  -->
     <div class="hero-section">
@@ -123,7 +134,7 @@
      <section class="members-board">
         <div class="container">
            <div class="wrapper">
-            
+
            </div>
         </div>
     </section>
