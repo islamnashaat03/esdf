@@ -23,12 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="coming-soon-container">
 	<div class="content ">
-		<!-- Add Logo Here if available -->
-		<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="logo"> -->
-		
-		<h1><?php echo lang_in('Coming Soon', 'قريباً'); ?></h1>
-		<p><?php echo lang_in('We are working hard to bring you something amazing.', 'نحن نعمل بجد لنقدم لكم شيئاً مميزاً.'); ?></p>
-	</div>
+		<h2>
+			ESDF
+		</h2>
+		<h2>
+الجمعية المصرية للقدم السكري 		</h2>
+	</div>	
 </div>
 
 <?php wp_footer(); ?>

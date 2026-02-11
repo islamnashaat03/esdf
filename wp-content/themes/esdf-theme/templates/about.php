@@ -82,11 +82,11 @@ get_header();
                 </div>
                 <div class="wrapper">
                     <?php 
-                    $i = 50;
-                    $has_group = have_rows('about_page_group');
-                    
-                    if( $has_group ):
-                        while( have_rows('about_page_group') ): the_row();
+                    $i = 50; 
+                    // Case 1: Fields inside a Group on Options Page (Primary per user request)
+                    if( have_rows('about_page_group', 'option') ):
+                        while( have_rows('about_page_group', 'option') ): the_row();
+                            // Inside the group, we check for the repeater WITHOUT 'option'
                             if( have_rows('objectives_list') ):
                                 while( have_rows('objectives_list') ): the_row();
                                     $title = get_sub_field('objectives_list_title');
@@ -106,23 +106,7 @@ get_header();
                                 <?php endwhile;
                             endif;
                         endwhile;
-                    elseif( have_rows('objectives_list') ): // Fallback for direct page fields (no group)
-                         while( have_rows('objectives_list') ): the_row();
-                            $title = get_sub_field('objectives_list_title');
-                            $text = get_sub_field('objectives_list_text');
-                            $icon_class = get_sub_field('objectives_list_icon_class'); 
-                            ?>
-                            <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
-                                <div class="icon-box">
-                                    <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
-                                </div>
-                                <div class="content">
-                                    <h3><?php echo esc_html($title); ?></h3>
-                                    <p><?php echo esc_html($text); ?></p>
-                                </div>
-                            </div>
-                            <?php $i += 50; ?>
-                        <?php endwhile;
+                    // Case 2: Repeater directly on Options Page (Fallback if not in group)
                     elseif( have_rows('objectives_list', 'option') ):
                          while( have_rows('objectives_list', 'option') ): the_row();
                             $title = get_sub_field('objectives_list_title');
@@ -161,11 +145,12 @@ get_header();
                 <div class="wrapper">
                     <?php 
                     $j = 50;
-                    // Reimplements group logic similarly
-                    if( have_rows('about_page_group' , 'option') ):
-                        while( have_rows('about_page_group' , 'option') ): the_row();
-                             if( have_rows('board_members' , 'option') ):
-                                while( have_rows('board_members' , 'option') ): the_row();
+                    // Case 1: Fields inside a Group on Options Page (Primary per user request)
+                    if( have_rows('about_page_group', 'option') ):
+                        while( have_rows('about_page_group', 'option') ): the_row();
+                            // Inside the group, we check for repeater WITHOUT 'option'
+                             if( have_rows('board_members') ):
+                                while( have_rows('board_members') ): the_row();
                                     $name = get_sub_field('member_name');
                                     $role = get_sub_field('member_role');
                                     $specialty = get_sub_field('member_specialty');
@@ -187,27 +172,7 @@ get_header();
                                 <?php endwhile;
                             endif;
                         endwhile;
-                    elseif( have_rows('board_members') ):
-                        while( have_rows('board_members') ): the_row();
-                            $name = get_sub_field('member_name');
-                            $role = get_sub_field('member_role');
-                            $specialty = get_sub_field('member_specialty');
-                            $image = get_sub_field('member_image');
-                            ?>
-                            <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $j; ?>">
-                                <div class="member-img">
-                                    <?php if($image): ?>
-                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($name); ?>">
-                                    <?php else: ?>
-                                        <i class="fa-solid fa-user"></i>
-                                    <?php endif; ?>
-                                </div>
-                                <h3><?php echo esc_html($name); ?></h3>
-                                <span class="role"><?php echo esc_html($role); ?></span>
-                                <span class="specialty"><?php echo esc_html($specialty); ?></span>
-                            </div>
-                            <?php $j += 50; ?>
-                        <?php endwhile;
+                    // Case 2: Repeater directly on Options Page (Fallback if not in group)
                     elseif( have_rows('board_members', 'option') ):
                         while( have_rows('board_members', 'option') ): the_row();
                             $name = get_sub_field('member_name');
