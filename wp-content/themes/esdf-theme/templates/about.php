@@ -93,7 +93,7 @@ get_header();
                                     $text = get_sub_field('objectives_list_text');
                                     $icon_class = get_sub_field('objectives_list_icon_class'); 
                                     ?>
-                                    <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
+                                    <div class="objective-card 11" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                         <div class="icon-box">
                                             <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
                                         </div>
@@ -113,7 +113,7 @@ get_header();
                             $text = get_sub_field('objectives_list_text');
                             $icon_class = get_sub_field('objectives_list_icon_class'); 
                             ?>
-                            <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
+                            <div class="objective-card 12" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                 <div class="icon-box">
                                     <i class="<?php echo $icon_class ? esc_attr($icon_class) : 'fa-check'; ?>"></i>
                                 </div>

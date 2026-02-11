@@ -94,9 +94,9 @@
 
   .objective-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #eee;
     border-radius: 12px;
     background: #fff;
