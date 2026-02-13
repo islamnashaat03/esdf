@@ -15,6 +15,9 @@ Version: 1.0.0
 @import url('404-search.css');
 @import "about.css";
 @import "key-areas.css";
+@import "news-section.css";
+@import "contact-section.css";
+@import "single-post.css";
 @import "about-page.css";
 
 
