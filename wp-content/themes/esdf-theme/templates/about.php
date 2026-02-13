@@ -95,7 +95,14 @@ get_header();
                                     ?>
                                     <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                         <div class="icon-box">
-                                            <?php echo '<i class="' . esc_attr($icon_class) . '"></i>' ?>
+                                            <?php 
+                                            // Fix for ACF FontAwesome: check if it returns full tag or just class
+                                            if (strpos($icon_class, '<') !== false) {
+                                                echo $icon_class;
+                                            } else {
+                                                echo '<i class="' . esc_attr($icon_class) . '"></i>';
+                                            }
+                                            ?>
                                         </div>
                                         <div class="content">
                                             <h3><?php echo esc_html($title); ?></h3>
@@ -114,7 +121,37 @@ get_header();
         <!-- END OBJECTIVES SECTION -->
 
         <!-- START BOARD OF MEMBERS SECTION -->
-
+        <section class="board-members">
+             <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2><?php echo get_field('board_title', 'option'); ?></h2>
+                    <div class="text"><?php echo get_field('board_desc', 'option'); ?></div>
+                </div>
+                <div class="wrapper">
+                    <?php if( have_rows('board_members', 'option') ): ?>
+                        <?php while( have_rows('board_members', 'option') ): the_row(); 
+                            $image = get_sub_field('member_image');
+                            $name = get_sub_field('member_name');
+                            $role = get_sub_field('member_role');
+                            $specialty = get_sub_field('member_specialty');
+                        ?>
+                            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="member-img">
+                                    <?php if($image): ?>
+                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                    <?php else: ?>
+                                        <i class="fa-solid fa-user"></i>
+                                    <?php endif; ?>
+                                </div>
+                                <h3><?php echo esc_html($name); ?></h3>
+                                <span class="role"><?php echo esc_html($role); ?></span>
+                                <span class="specialty"><?php echo esc_html($specialty); ?></span>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+             </div>
+        </section>
         <!-- END BOARD OF MEMBERS SECTION -->
 
 	</div>

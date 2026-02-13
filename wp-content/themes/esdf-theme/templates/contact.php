@@ -58,19 +58,8 @@ get_header();
                                 </div>
                             </li>
                         <?php endif; ?>
-
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <div class="icon-box">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-                            <div class="info">
-                                <h4><?php lang_in('Visitor Count', 'عدد الزوار'); ?></h4>
-                                <p>3,289,929 <?php lang_in('visitors', 'زائر'); ?></p>
-                            </div>
-                        </li>
                     </ul>
                 </div>
-                
                 <div class="contact-form-container" data-aos="fade-left" data-aos-delay="300">
                     <?php echo do_shortcode('[wpforms id="110"]'); ?>
                 </div>
