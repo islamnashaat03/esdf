@@ -28,6 +28,7 @@
     border: 0;
     overflow: hidden;
     transition: var(--transition);
+    display: none;
   }
 }
 
@@ -43,7 +44,7 @@
   max-height: 200px;
   opacity: 1;
   overflow: hidden;
-  display: block;
+  display: none;
 }
 
 .upper-bar .wrapper {
@@ -52,6 +53,7 @@
   color: var(--text-color);
   gap: 20px;
   flex-wrap: wrap;
+
 }
 
 .upper-bar .wrapper .navbar-brand {
