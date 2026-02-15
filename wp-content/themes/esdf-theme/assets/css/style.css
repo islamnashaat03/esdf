@@ -19,8 +19,8 @@ Version: 1.0.0
 @import "contact-section.css";
 @import "single-post.css";
 @import "about-page.css";
+@import "pagination.css";
 
 
 @import "footer.css";
-@import "pagination.css";
 @import "media-queries.css";
