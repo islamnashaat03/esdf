@@ -77,11 +77,16 @@ if (!defined('ABSPATH')) {
             'items_wrap' => '<ul class="navbar-links">%3$s</ul>',
           )); ?>
           <div class="icons">
-            <?php if (defined('ICL_LANGUAGE_CODE')): ?>
-              <a class="languages" href="<?php echo esc_url(ICL_LANGUAGE_CODE === 'ar' ? '/en' : '/ar'); ?>">
-                <?php echo ICL_LANGUAGE_CODE === 'ar' ? 'En' : 'Ar'; ?>
-              </a>
-            <?php endif; ?>
+            <?php 
+            $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'en';
+            $target_lang = ($current_lang === 'ar') ? 'en' : 'ar';
+            $lang_text = ($current_lang === 'ar') ? 'En' : 'Ar';
+            // Use query parameter as requested by user ("lang=en")
+            $lang_url = add_query_arg('lang', $target_lang); 
+            ?>
+            <a class="languages" href="<?php echo esc_url($lang_url); ?>">
+              <?php echo esc_html($lang_text); ?>
+            </a>
           </div>
           <div class="search-div">
             <form class="search-form" method="get" action="<?php echo esc_url(home_url('/')); ?>">

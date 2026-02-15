@@ -159,7 +159,7 @@ ul {
 
 .main-btn:hover::before {
   opacity: 1;
-  transform: rotate(-45deg) translateY(300%);
+  transform: rotate(-45deg) translateY(500%);
 }
 
 .main-btn.reversed {
