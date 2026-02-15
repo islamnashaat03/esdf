@@ -184,8 +184,8 @@ get_header();
                     <p class="no-news"><?php lang_in('No news available at the moment.', 'لا توجد أخبار متاحة في الوقت الحالي.'); ?></p>
                 <?php endif; ?>
             </div>
-            <div class="view-all-btn " data-aos="fade-up" data-aos-delay="150">
-                <a href="<?php the_permalink(26); ?>" class="main-btn">
+            <div  data-aos="fade-up" data-aos-delay="10">
+                <a href="<?php the_permalink(125); ?>" class="main-btn">
                     <?php lang_in('View All News', 'عرض جميع الأخبار'); ?> <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>

@@ -1,5 +1,6 @@
 .fixed-nav {
   background-color: transparent;
+  transition: var(--transition);
 }
 
 .fixed-nav.fixed {
@@ -20,9 +21,13 @@
   }
 
   .upper-bar {
-    padding-bottom: 0;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
     transition: var(--transition);
-    display: none;
   }
 }
 
@@ -34,7 +39,11 @@
   color: #fff;
   border-bottom: 1px solid #fff;
   transition: var(--transition);
-  display: none;
+  /* Ensure animatable properties are set */
+  max-height: 200px;
+  opacity: 1;
+  overflow: hidden;
+  display: block;
 }
 
 .upper-bar .wrapper {
