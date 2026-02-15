@@ -64,7 +64,15 @@ get_header();
                     </div>
                 <?php endwhile; ?>
                 
-                <!-- Pagination -->
+               
+                
+                <?php
+                wp_reset_postdata();
+            else : ?>
+                <p class="no-news"><?php lang_in('No news available at the moment.', 'لا توجد أخبار متاحة في الوقت الحالي.'); ?></p>
+            <?php endif; ?>
+        </div>
+         <!-- Pagination -->
                 <div class="pagination-wrapper" data-aos="fade-up">
                     <?php
                     $total_pages = $news_query->max_num_pages;
@@ -90,13 +98,6 @@ get_header();
                     }
                     ?>
                 </div>
-                
-                <?php
-                wp_reset_postdata();
-            else : ?>
-                <p class="no-news"><?php lang_in('No news available at the moment.', 'لا توجد أخبار متاحة في الوقت الحالي.'); ?></p>
-            <?php endif; ?>
-        </div>
     </div>
 </section>
 
