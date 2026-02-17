@@ -80,51 +80,46 @@ get_header();
                 <div class="text"><?php echo get_field('key_areas_text', 'option'); ?></div>
             </div>
             <div class="wrapper">
-                <?php 
-                if (have_rows('key_areas_list', 'option')):
-                    while (have_rows('key_areas_list', 'option')) : the_row();
-                        $icon = get_sub_field('icon');
-                        $title = get_sub_field('title');
-                        $desc = get_sub_field('description');
-                        $link = get_sub_field('link');
-                        ?>
                         <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon-box">
-                                <?php if ($icon): ?>
-                                    <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>">
-                                <?php else: ?>
-                                    <i class="fa-solid fa-star"></i> <!-- Fallback icon -->
-                                <?php endif; ?>
+                                <i class="fa-solid fa-microscope"></i>
                             </div>
-                            <h3><?php echo esc_html($title); ?></h3>
-                            <p><?php echo esc_html($desc); ?></p>
-                            <a href="<?php echo esc_url($link); ?>" class="learn-more">
+                            <h3><?php echo lang_in('Take Care of Your Feet ', ' اعتن بقدمك'); ?></h3>
+                            <p><?php echo lang_in('Conducting cutting-edge research and publishing findings in peer-reviewed journals.', ' إجراء أبحاث متطورة ونشر النتائج في مجلات محكمة.'); ?></p>
+                            <a href="<?php echo the_permalink(645); ?>" class="learn-more">
                                 <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
-                    <?php endwhile;
-                else: 
-                    // Fallback content for visualization if no fields are set
-                    $fallback_cards = [
-                        ['title' => 'Take Care of Your Feet ', 'desc' => 'Conducting cutting-edge research and publishing findings in peer-reviewed journals.', 'icon' => 'fa-microscope'],
-                        ['title' => 'Events', 'desc' => 'Annual national conferences bringing together healthcare professionals.', 'icon' => 'fa-chalkboard-user'],
-                        ['title' => 'Educational Programs', 'desc' => 'Comprehensive training workshops and educational materials.', 'icon' => 'fa-graduation-cap'],
-                        ['title' => 'Magazine', 'desc' => 'Join our community of dedicated healthcare professionals.', 'icon' => 'fa-users']
-                    ];
-                    foreach ($fallback_cards as $card): ?>
                         <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon-box">
-                                <i class="fa-solid <?php echo $card['icon']; ?>"></i>
+                                <i class="fa-solid fa-chalkboard-user"></i>
                             </div>
-                            <h3><?php echo esc_html($card['title']); ?></h3>
-                            <p><?php echo esc_html($card['desc']); ?></p>
-                            <a href="#" class="learn-more">
+                            <h3><?php echo lang_in('Events', 'المؤتمرات'); ?></h3>
+                            <p><?php echo lang_in('Annual national conferences bringing together healthcare professionals.', 'المؤتمرات الوطنية السنوية التي تجمع المتخصصين في الرعاية الصحية.'); ?></p>
+                            <a href="<?php echo the_permalink(34); ?>" class="learn-more">
                                 <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
-                    <?php endforeach;
-                endif; 
-                ?>
+                        <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3><?php echo lang_in('Educational Programs', 'البرامج التعليمية'); ?></h3>
+                            <p><?php echo lang_in('Comprehensive training workshops and educational materials.', 'ورش عمل تدريبية شاملة ومواد تعليمية.'); ?></p>
+                            <a href="<?php echo the_permalink(36); ?>" class="learn-more">
+                                <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3><?php echo lang_in('Magazine', 'المجلة'); ?></h3>
+                            <p><?php echo lang_in('The of   ficial magazine of the Egyptian Society of Diabetic Foot', 'المجلة الرسمية للجمعية المصرية لقدم السكري.'); ?></p>
+                            <a href="<?php echo the_permalink(26); ?>" class="learn-more">
+                                <?php lang_in('Learn More', 'اقرأ المزيد'); ?> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
             </div>
         </div>
 
