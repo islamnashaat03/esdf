@@ -76,7 +76,7 @@ get_header();
     <section class="key-areas">
         <div class="container">
             <div class="section-header">
-                <h2><?php echo get_field('key_areas_title', 'option'); ?></h2>
+                <h2><?php echo get_field('key_areas_title'); ?></h2>
                 <div class="text"><?php echo get_field('key_areas_text', 'option'); ?></div>
             </div>
             <div class="wrapper">
