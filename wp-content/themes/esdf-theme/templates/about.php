@@ -86,10 +86,10 @@ get_header();
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <h2>
-            <?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: ''); ?>
+            <?php echo get_field('objective_title'); ?>
           </h2>
           <div class="text">
-            <?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: ''); ?>
+            <?php echo get_field('objective_description'); ?>
           </div>
         </div>
         <div class="wrapper">
