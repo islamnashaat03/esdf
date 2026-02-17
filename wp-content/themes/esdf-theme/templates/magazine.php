@@ -39,18 +39,25 @@ get_header();
                     $k = 0;
                 ?>
                     <div class="magazine-card" data-aos="fade-up" data-aos-delay="<?php echo $k; ?>">   
-                        <span class="magazine-icon">
+                        <div>
+                            <span class="magazine-icon">
                             <i class="fa-solid fa-file-pdf"></i> 
                         </span>  
                             <?php if ($magazine_title) : ?>
                                 <h3><?php echo esc_html($magazine_title); ?></h3>
                             <?php endif; ?>
-                            <a href="<?php echo esc_url($magazine_file); ?>" 
-                               class="download-btn" 
-                               target="_blank" 
-                               rel="noopener">
-                                <i class="fa-regular fa-eye"></i>
-                            </a>
+                        </div>
+                        <a href="<?php echo esc_url($magazine_file); ?>" 
+                            class="download-btn" 
+                            target="_blank" 
+                            rel="noopener">
+                            <i class="fa-regular fa-eye"></i>
+                        </a>
+                        <a href="<?php echo esc_url($magazine_file); ?>" 
+                            class="link-overlay" 
+                            target="_blank" 
+                            rel="noopener">
+                        </a>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
