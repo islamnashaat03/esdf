@@ -124,12 +124,20 @@
   .upper-bar .wrapper .social-links li a span {
     color: #000;
   }
-}
 
-@media screen and (max-width:767px) {
+  .magazine-card .download-btn {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
   .nav-bar .nav-flex .main-btn {
     min-width: fit-content;
   }
+}
+
+@media screen and (max-width:767px) {
+
 
   .search-div {
     form {

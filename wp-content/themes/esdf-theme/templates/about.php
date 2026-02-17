@@ -128,14 +128,18 @@ get_header();
                     <div class="text"><?php echo get_field('board_desc', 'option'); ?></div>
                 </div>
                 <div class="wrapper">
-                    <?php if( have_rows('board_members', 'option') ): ?>
-                        <?php while( have_rows('board_members', 'option') ): the_row(); 
-                            $image = get_sub_field('member_image');
-                            $name = get_sub_field('member_name');
-                            $role = get_sub_field('member_role');
-                            $specialty = get_sub_field('member_specialty');
-                        ?>
-                            <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+                    <?php if( have_rows('about_page_group', 'option') ):
+                        while( have_rows('about_page_group', 'option') ): the_row();
+                            // Inside the group, we check for the repeater WITHOUT 'option'
+                            if( have_rows('board_members') ):
+                                while( have_rows('board_members') ): the_row();
+                                    $image = get_sub_field('member_image');
+                                    $name = get_sub_field('member_name');
+                                    $role = get_sub_field('member_role');
+                                    $specialty = get_sub_field('member_specialty');
+                                    $i = 0; 
+                                    ?>
+                            <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                                 <div class="member-img">
                                     <?php if($image): ?>
                                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
@@ -148,7 +152,7 @@ get_header();
                                 <span class="specialty"><?php echo esc_html($specialty); ?></span>
                             </div>
                         <?php endwhile; ?>
-                    <?php endif; ?>
+                    <?php $i += 50; endif; ?>
                 </div>
              </div>
         </section>
