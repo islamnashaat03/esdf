@@ -76,11 +76,12 @@ get_header();
     <section class="key-areas">
         <div class="container">
             <div class="section-header">
-
+              <?php if( have_rows('home_page', 'option') ): ?>
+        <?php while( have_rows('home_page', 'option') ): the_row(); ?>
                 <h2><?php echo get_sub_field('key_areas_title' , 'option'); ?></h2>
                 <div class="text"><?php echo get_sub_field('key_areas_text' , 'option'); ?></div>
                 <?php endwhile; ?>
-
+<?php endif; ?>
             </div>
             <div class="wrapper">
                         <div class="key-area-card" data-aos="fade-up" data-aos-delay="100">
