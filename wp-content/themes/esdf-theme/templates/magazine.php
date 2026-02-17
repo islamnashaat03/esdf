@@ -39,10 +39,10 @@ get_header();
                     $k = 0;
                 ?>
                     <div class="magazine-card" data-aos="fade-up" data-aos-delay="<?php echo $k; ?>">   
-                        <div>
+                        <div class="magazine-content">
                             <span class="magazine-icon">
-                            <i class="fa-solid fa-file-pdf"></i> 
-                        </span>  
+                                <i class="fa-solid fa-file-pdf"></i> 
+                                </span>  
                             <?php if ($magazine_title) : ?>
                                 <h3><?php echo esc_html($magazine_title); ?></h3>
                             <?php endif; ?>

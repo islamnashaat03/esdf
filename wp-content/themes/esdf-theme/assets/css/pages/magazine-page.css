@@ -65,7 +65,13 @@
   }
 }
 
-.magazine-cover .link-overlay {
+.magazine-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.magazine-card .link-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -88,7 +94,7 @@
   justify-content: center;
   color: #fff;
   transition: .5s all ease-in-out;
-  transform: translateX(-10px);
+  transform: translateX(-60px);
   opacity: 0;
   visibility: hidden;
 }
