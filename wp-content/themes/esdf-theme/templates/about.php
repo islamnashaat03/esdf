@@ -142,8 +142,23 @@ get_header();
                           ?>
                 <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $t; ?>">
                   <div class="member-img">
-                      <?php if($image): ?>
-                          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                      <?php if($image): 
+                          // Handle different ACF image return formats
+                          if(is_array($image)) {
+                              // Image Array format
+                              $image_url = esc_url($image['url']);
+                              $image_alt = esc_attr($image['alt']);
+                          } elseif(is_numeric($image)) {
+                              // Image ID format
+                              $image_url = esc_url(wp_get_attachment_image_url($image, 'full'));
+                              $image_alt = esc_attr(get_post_meta($image, '_wp_attachment_image_alt', true));
+                          } else {
+                              // Image URL format
+                              $image_url = esc_url($image);
+                              $image_alt = '';
+                          }
+                      ?>
+                          <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
                       <?php else: ?>
                           <i class="fa-solid fa-user"></i>
                       <?php endif; ?>
