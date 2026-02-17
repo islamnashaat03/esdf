@@ -82,7 +82,7 @@ get_header();
         </div>
         <div class="wrapper">
         <?php 
-        $i = 50; 
+        $i = 0; 
         // Case 1: Fields inside a Group on Options Page (Primary per user request)
         if( have_rows('about_page_group', 'option') ):
         while( have_rows('about_page_group', 'option') ): the_row();
@@ -97,11 +97,7 @@ get_header();
                       <div class="icon-box">
                           <?php 
                           // Fix for ACF FontAwesome: check if it returns full tag or just class
-                          if (strpos($icon_class, '<') !== false) {
-                              echo $icon_class;
-                          } else {
-                              echo '<i class="' . esc_attr($icon_class) . '"></i>';
-                          }
+                          echo $icon_class;
                           ?>
                       </div>
                       <div class="content">
