@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!mainMenu.classList.contains('fixed')) {
           // Get navbar height before fixing it
           const navHeight = mainMenu.offsetHeight;
-          mainMenu.classList.add('fixed');
+        mainMenu.classList.add('fixed');
           // Add padding to body to prevent content jump
           document.body.style.paddingTop = navHeight + 'px';
         }

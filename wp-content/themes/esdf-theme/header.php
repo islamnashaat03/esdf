@@ -60,7 +60,7 @@ if (!defined('ABSPATH')) {
         </div>
       </div>
     </div>
-    <div class="nav-bar wow fadeInDown">
+    <div class="nav-bar">
       <div class="container">
         <nav class="nav-flex">
           <a href="<?php echo esc_url(home_url('/')); ?>" class="navbar-brand">

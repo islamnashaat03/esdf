@@ -5,6 +5,7 @@
 }
 
 .fixed-nav.fixed {
+  animation: slideDown 0.5s ease-in-out forwards;
   position: fixed;
   top: 0;
   inset-inline-start: 0;
@@ -406,4 +407,15 @@
 
 .mobile-logo {
   display: none;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
