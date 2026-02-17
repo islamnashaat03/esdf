@@ -78,8 +78,8 @@ get_header();
             <div class="section-header">
               <?php if( have_rows('home_page', 'option') ): ?>
         <?php while( have_rows('home_page', 'option') ): the_row(); ?>
-                <h2><?php echo get_field('key_areas_title'); ?></h2>
-                <div class="text"><?php echo get_field('key_areas_text', 'option'); ?></div>
+                <h2><?php echo get_sub_field('key_areas_title'); ?></h2>
+                <div class="text"><?php echo get_sub_field('key_areas_text' , 'option'); ?></div>
                 <?php endwhile; ?>
 <?php endif; ?>
             </div>
