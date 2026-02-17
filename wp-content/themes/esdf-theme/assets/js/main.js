@@ -74,9 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (mainMenu) {
       if (window.scrollY > 100) {
-        mainMenu.classList.add('fixed');
+        if (!mainMenu.classList.contains('fixed')) {
+          // Get navbar height before fixing it
+          const navHeight = mainMenu.offsetHeight;
+          mainMenu.classList.add('fixed');
+          // Add padding to body to prevent content jump
+          document.body.style.paddingTop = navHeight + 'px';
+        }
       } else {
         mainMenu.classList.remove('fixed');
+        // Remove padding when navbar is not fixed
+        document.body.style.paddingTop = '0';
       }
     }
 
