@@ -124,8 +124,8 @@ get_header();
         <section class="board-members">
           <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2><?php echo get_field('board_title') ? get_field('board_title') : (get_field('board_title', 'option') ); ?></h2>
-                <div class="text"><?php echo get_field('board_desc') ? get_field('board_desc') : (get_field('board_desc', 'option') ); ?></div>
+              <h2><?php echo get_field('board_title') ?: (get_field('board_title', 'option') ?: 'Board of Members'); ?></h2>
+              <div class="text"><?php echo get_field('board_desc') ?: (get_field('board_desc', 'option') ?: 'Board of Members'); ?></div>
             </div>
             <div class="wrapper">
               <?php 
