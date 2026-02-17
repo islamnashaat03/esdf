@@ -17,7 +17,7 @@ get_header();
         <div class="section-header">
             <h2 data-aos="fade-up" data-aos-delay="50"><?php echo get_field('news_section_title', 'option'); ?></h2>
             <div class="text" data-aos="fade-up" data-aos-delay="100">
-                <?php echo get_field('news_section_text') ;?>
+                <?php echo get_field('news_section_text', 'option') ;?>
             </div>
         </div>
         <div class="wrapper">
