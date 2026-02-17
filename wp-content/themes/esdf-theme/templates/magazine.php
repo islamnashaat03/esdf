@@ -46,7 +46,7 @@ get_header();
                                 <h3><?php echo esc_html($magazine_title); ?></h3>
                             <?php endif; ?>
                             <a href="<?php echo esc_url($magazine_file); ?>" 
-                               class="main-btn" 
+                               class="download-btn" 
                                target="_blank" 
                                rel="noopener">
                                 <i class="fa-regular fa-eye"></i>
