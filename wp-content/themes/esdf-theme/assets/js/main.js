@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize AOS
   AOS.init({
+    duration: 1000,
     easing: 'ease-in-out',
     once: true,
-    mirror: true,
-    anchorPlacement: 'top-bottom',
-    offset: 100,
+    offset: 0,
 
   });
+  window.addEventListener('load', function () {
+  AOS.refresh();
+});
 
   const menuBtn = document.querySelector('.toggle-btn');
   const closeMenuBtn = document.querySelector('.navbar-close-btn');
