@@ -86,10 +86,10 @@ get_header();
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <h2>
-            <?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: 'Our Objectives'); ?>
+            <?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: ''); ?>
           </h2>
           <div class="text">
-            <?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: 'ESDF is committed to achieving excellence in diabetic foot care through these key objectives'); ?>
+            <?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: ''); ?>
           </div>
         </div>
         <div class="wrapper">
