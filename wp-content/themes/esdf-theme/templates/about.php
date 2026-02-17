@@ -14,74 +14,86 @@ get_header();
 
 <main id="main" class="site-main">
   <div class="custom-page about-page">
-        <!-- START VISION & MISSION SECTION -->
-        <section class="vision-mission">
-        <div class="container">
+    <!-- START VISION & MISSION SECTION -->
+    <section class="vision-mission">
+      <div class="container">
         <div class="wrapper">
-        <!-- Vision -->
-        <div class="vm-card" data-aos="fade-up" data-aos-delay="50">
-        <div class="icon-box">
-          <i class="fa-solid fa-eye"></i>
+          <!-- Vision -->
+          <div class="vm-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="icon-box">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3><?php echo get_field('vision_title', 'option') ? get_field('vision_title', 'option') : 'Our Vision'; ?>
+            </h3>
+            <p>
+              <?php echo get_field('vision_text', 'option') ? get_field('vision_text', 'option') : 'To be the leading authority in diabetic foot care in Egypt and the region, recognized for excellence in prevention, treatment, research, and education.'; ?>
+            </p>
+          </div>
+          <!-- Mission -->
+          <div class="vm-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <i class="fa-solid fa-bullseye"></i> <!-- Fallback if no icon field -->
+            </div>
+            <h3>
+              <?php echo get_field('mission_title', 'option') ? get_field('mission_title', 'option') : 'Our Mission'; ?>
+            </h3>
+            <p>
+              <?php echo get_field('mission_text', 'option') ? get_field('mission_text', 'option') : 'To improve the quality of healthcare services and care provided to diabetic patients, protecting their feet from disease complications.'; ?>
+            </p>
+          </div>
         </div>
-        <h3><?php echo get_field('vision_title', 'option') ? get_field('vision_title', 'option') : 'Our Vision'; ?></h3>
-        <p><?php echo get_field('vision_text', 'option') ? get_field('vision_text', 'option') : 'To be the leading authority in diabetic foot care in Egypt and the region, recognized for excellence in prevention, treatment, research, and education.'; ?></p>
-        </div>
-        <!-- Mission -->
-        <div class="vm-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-box">
-          <i class="fa-solid fa-bullseye"></i> <!-- Fallback if no icon field -->
-        </div>
-        <h3><?php echo get_field('mission_title', 'option') ? get_field('mission_title', 'option') : 'Our Mission'; ?></h3>
-        <p><?php echo get_field('mission_text', 'option') ? get_field('mission_text', 'option') : 'To improve the quality of healthcare services and care provided to diabetic patients, protecting their feet from disease complications.'; ?></p>
-        </div>
-        </div>
-        </div>
-        </section>
-        <!-- END VISION & MISSION SECTION -->
-        <!-- START ABOUT SECTION  -->
-        <section class="about">
-        <div class="container">
+      </div>
+    </section>
+    <!-- END VISION & MISSION SECTION -->
+    <!-- START ABOUT SECTION  -->
+    <section class="about">
+      <div class="container">
         <div class="wrapper">
-        <div class="content">
-        <h2 data-aos="fade-up" data-aos-delay="50"><?php echo get_field('about_title', 'option'); ?></h2>
-        <div class="text" data-aos="fade-up" data-aos-delay="100"><?php echo get_field('about_text', 'option'); ?></div>
-        <ul class="numbers">
-        <li data-aos="fade-up" data-aos-delay="50">
-          <div class="number">15+</div>
-          <div class="text"><?php lang_in('Years of Experience', 'سنوات من الخبرة'); ?></div>
-        </li>       
-        <li data-aos="fade-up" data-aos-delay="100">
-          <div class="number">500+</div>
-          <div class="text" ><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
-        </li>
-        <li data-aos="fade-up" data-aos-delay="150">
-          <div class="number">16+</div>
-          <div class="text" ><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
-        </li>
-        <li data-aos="fade-up" data-aos-delay="200">
-          <div class="number">3M+</div>
-          <div class="text" ><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
-        </li>
-        </ul>
+          <div class="content">
+            <h2 data-aos="fade-up" data-aos-delay="50"><?php echo get_field('about_title', 'option'); ?></h2>
+            <div class="text" data-aos="fade-up" data-aos-delay="100"><?php echo get_field('about_text', 'option'); ?>
+            </div>
+            <ul class="numbers">
+              <li data-aos="fade-up" data-aos-delay="50">
+                <div class="number">15+</div>
+                <div class="text"><?php lang_in('Years of Experience', 'سنوات من الخبرة'); ?></div>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="75">
+                <div class="number">500+</div>
+                <div class="text"><?php lang_in('Active Members', 'الاعضاء النشطين'); ?></div>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="100">
+                <div class="number">16+</div>
+                <div class="text"><?php lang_in('Annual Conferences', 'المؤتمرات السنوية'); ?></div>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="125">
+                <div class="number">3M+</div>
+                <div class="text"><?php lang_in('Website Visitors', 'زوار الموقع'); ?></div>
+              </li>
+            </ul>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="125" class="image">
+            <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">
+          </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="250" class="image">
-        <img src="<?php echo esc_url(get_field('about_img', 'option')); ?>" alt="About Image">
-        </div>
-        </div>
-        </div>
+      </div>
 
-        </section>
-        <!-- END ABOUT SECTION  -->
+    </section>
+    <!-- END ABOUT SECTION  -->
 
-        <!-- START OBJECTIVES SECTION -->
-        <section class="objectives">
-        <div class="container">
+    <!-- START OBJECTIVES SECTION -->
+    <section class="objectives">
+      <div class="container">
         <div class="section-header" data-aos="fade-up">
-        <h2><?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: 'Our Objectives'); ?></h2>
-        <div class="text"><?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: 'ESDF is committed to achieving excellence in diabetic foot care through these key objectives'); ?></div>
+          <h2>
+            <?php echo get_field('objective_title') ? get_field('objective_title') : (get_field('objective_title', 'option') ?: 'Our Objectives'); ?>
+          </h2>
+          <div class="text">
+            <?php echo get_field('objective_description') ? get_field('objective_description') : (get_field('objective_description', 'option') ?: 'ESDF is committed to achieving excellence in diabetic foot care through these key objectives'); ?>
+          </div>
         </div>
         <div class="wrapper">
-        <?php 
+          <?php 
         $i = 0; 
         // Case 1: Fields inside a Group on Options Page (Primary per user request)
         if( have_rows('about_page_group', 'option') ):
@@ -93,38 +105,39 @@ get_header();
                   $text = get_sub_field('objectives_list_text');
                   $icon_class = get_sub_field('objectives_list_icon'); 
                   ?>
-                  <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
-                      <div class="icon-box">
-                          <?php 
+          <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
+            <div class="icon-box">
+              <?php 
                           // Fix for ACF FontAwesome: check if it returns full tag or just class
                           echo $icon_class;
                           ?>
-                      </div>
-                      <div class="content">
-                          <h3><?php echo esc_html($title); ?></h3>
-                          <p><?php echo esc_html($text); ?></p>
-                      </div>
-                  </div>
-                  <?php $i += 50; ?>
-              <?php endwhile;
+            </div>
+            <div class="content">
+              <h3><?php echo esc_html($title); ?></h3>
+              <p><?php echo esc_html($text); ?></p>
+            </div>
+          </div>
+          <?php $i += 50; ?>
+          <?php endwhile;
           endif;
         endwhile;
 
         endif; ?>
         </div>
-        </div>
-        </section>
-        <!-- END OBJECTIVES SECTION -->
+      </div>
+    </section>
+    <!-- END OBJECTIVES SECTION -->
 
-        <!-- START BOARD OF MEMBERS SECTION -->
-        <section class="board-members">
-          <div class="container">
-            <div class="section-header" data-aos="fade-up">
-              <h2><?php echo get_field('board_title') ?: (get_field('board_title', 'option') ?: 'Board of Members'); ?></h2>
-              <div class="text"><?php echo get_field('board_desc') ?: (get_field('board_desc', 'option') ?: 'Board of Members'); ?></div>
-            </div>
-            <div class="wrapper">
-              <?php 
+    <!-- START BOARD OF MEMBERS SECTION -->
+    <section class="board-members">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2><?php echo get_field('board_title') ?: (get_field('board_title', 'option') ?: 'Board of Members'); ?></h2>
+          <div class="text">
+            <?php echo get_field('board_desc') ?: (get_field('board_desc', 'option') ?: 'Board of Members'); ?></div>
+        </div>
+        <div class="wrapper">
+          <?php 
               $t = 0; // Initialize counter outside the loop
               if( have_rows('about_page_group', 'option') ):
                 while( have_rows('about_page_group', 'option') ): the_row();
@@ -136,9 +149,9 @@ get_header();
                           $role = get_sub_field('member_role');
                           $specialty = get_sub_field('member_specialty');
                           ?>
-                <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $t; ?>">
-                  <div class="member-img">
-                      <?php if($image): 
+          <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $t; ?>">
+            <div class="member-img">
+              <?php if($image): 
                           // Handle different ACF image return formats
                           if(is_array($image)) {
                               // Image Array format
@@ -154,25 +167,25 @@ get_header();
                               $image_alt = '';
                           }
                       ?>
-                          <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
-                      <?php else: ?>
-                          <i class="fa-solid fa-user"></i>
-                      <?php endif; ?>
-                  </div>
-                  <h3><?php echo esc_html($name); ?></h3>
-                  <span class="role"><?php echo esc_html($role); ?></span>
-                  <span class="specialty"><?php echo esc_html($specialty); ?></span>
-                </div>
-              <?php 
+              <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+              <?php else: ?>
+              <i class="fa-solid fa-user"></i>
+              <?php endif; ?>
+            </div>
+            <h3><?php echo esc_html($name); ?></h3>
+            <span class="role"><?php echo esc_html($role); ?></span>
+            <span class="specialty"><?php echo esc_html($specialty); ?></span>
+          </div>
+          <?php 
                       $t += 50; // Increment after each member
                       endwhile; 
                   endif; 
                 endwhile; // Close the group loop
               endif; ?>
-            </div>
-          </div>
-        </section>
-        <!-- END BOARD OF MEMBERS SECTION -->
+        </div>
+      </div>
+    </section>
+    <!-- END BOARD OF MEMBERS SECTION -->
   </div>
 </main>
 

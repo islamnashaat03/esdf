@@ -83,7 +83,7 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, calc(175.238px + 32.738vw), 45%), 1fr));
     /* 2 columns on layout */
     gap: 30px;
 
@@ -237,6 +237,7 @@
       font-weight: 700;
       color: var(--primary-color, #000);
       margin-bottom: 8px;
+      text-transform: capitalize;
     }
 
     .role {

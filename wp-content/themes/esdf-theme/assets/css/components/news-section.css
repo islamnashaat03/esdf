@@ -30,6 +30,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 
@@ -120,4 +121,7 @@
   line-height: 1.6;
   margin-bottom: 20px;
   flex-grow: 1;
+}
+.news-section .main-btn:hover{
+  color: #fff;
 }
