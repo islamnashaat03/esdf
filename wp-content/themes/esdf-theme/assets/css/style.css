@@ -6,21 +6,22 @@ Description: Custom theme for ESDF (Egyptian Sustainable Development Forum)
 Version: 1.0.0
 */
 
-@import "global-styles.css";
-@import "header-style.css";
-@import "navbar.css";
-@import "navbar-mobile.css";
-@import "searc-div.css";
-@import "hero-section.css";
-@import "404-search.css";
-@import "about.css";
-@import "key-areas.css";
-@import "news-section.css";
-@import "contact-section.css";
-@import "single-post.css";
-@import "about-page.css";
-@import "pagination.css";
+@import "globals/global-styles.css";
+@import "globals/header-style.css";
+@import "globals/navbar.css";
+@import "globals/navbar-mobile.css";
+@import "globals/searc-div.css";
+@import "components/hero-section.css";
+@import "pages/404-search.css";
+@import "components/about.css";
+@import "components/key-areas.css";
+@import "components/news-section.css";
+@import "components/contact-section.css";
+@import "pages/single-post.css";
+@import "pages/about-page.css";
+@import "globals/pagination.css";
+@import "pages/magazine-page.css";
 
 
-@import "footer.css";
-@import "media-queries.css";
+@import "globals/footer.css";
+@import "globals/media-queries.css";

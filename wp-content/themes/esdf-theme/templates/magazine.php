@@ -18,7 +18,7 @@ get_header();
             <h2 data-aos="fade-up" data-aos-delay="50">
                 <?php 
                 $title = get_field('magazine_section_title', 'option');
-                echo $title ? esc_html($title) : lang_in('Our Magazines', 'مجلاتنا'); 
+                echo $title;
                 ?>
             </h2>
             <div class="text" data-aos="fade-up" data-aos-delay="100">
@@ -35,61 +35,29 @@ get_header();
             <?php if (have_rows('magazines', 'option')) : ?>
                 <?php while (have_rows('magazines', 'option')) : the_row(); 
                     $magazine_file = get_sub_field('magazine_file');
-                    $magazine_title = get_sub_field('magazine_title');
-                    $magazine_cover = get_sub_field('magazine_cover');
-                    $magazine_date = get_sub_field('magazine_date');
-                    $magazine_description = get_sub_field('magazine_description');
+                    $magazine_title = get_sub_field('magazine_name');
+                    $k = 0;
                 ?>
-                    <div class="magazine-card" data-aos="fade-up" data-aos-delay="50">
-                        <?php if ($magazine_cover) : ?>
-                            <div class="magazine-cover">
-                                <img src="<?php echo esc_url($magazine_cover['url']); ?>" 
-                                     alt="<?php echo esc_attr($magazine_cover['alt'] ?: $magazine_title); ?>">
-                                <div class="overlay">
-                                    <a href="<?php echo esc_url($magazine_file); ?>" 
-                                       class="download-btn" 
-                                       target="_blank" 
-                                       rel="noopener">
-                                        <i class="fa-solid fa-download"></i>
-                                        <span><?php lang_in('Download', 'تحميل'); ?></span>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                        
-                        <div class="magazine-content">
+                    <div class="magazine-card" data-aos="fade-up" data-aos-delay="<?php echo $k; ?>">   
+                        <span class="magazine-icon">
+                            <i class="fa-solid fa-file-pdf"></i> 
+                        </span>  
                             <?php if ($magazine_title) : ?>
                                 <h3><?php echo esc_html($magazine_title); ?></h3>
                             <?php endif; ?>
-                            
-                            <?php if ($magazine_date) : ?>
-                                <div class="magazine-date">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <span><?php echo esc_html($magazine_date); ?></span>
-                                </div>
-                            <?php endif; ?>
-                            
-                            <?php if ($magazine_description) : ?>
-                                <div class="magazine-description">
-                                    <?php echo wp_kses_post($magazine_description); ?>
-                                </div>
-                            <?php endif; ?>
-                            
                             <a href="<?php echo esc_url($magazine_file); ?>" 
                                class="main-btn" 
                                target="_blank" 
                                rel="noopener">
-                                <i class="fa-solid fa-file-pdf"></i>
-                                <?php lang_in('View PDF', 'عرض PDF'); ?>
+                                <i class="fa-regular fa-eye"></i>
                             </a>
-                        </div>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
                 <p class="no-magazines">
                     <?php lang_in('No magazines available at the moment.', 'لا توجد مجلات متاحة في الوقت الحالي.'); ?>
                 </p>
-            <?php endif; ?>
+        <?php   $k+=50; endif; ?>
         </div>
     </div>
 </section>
