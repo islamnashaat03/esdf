@@ -91,7 +91,7 @@ get_header();
               while( have_rows('objectives_list') ): the_row();
                   $title = get_sub_field('objectives_list_title');
                   $text = get_sub_field('objectives_list_text');
-                  $icon_class = get_sub_field('objectives_list_icon_class'); 
+                  $icon_class = get_sub_field('objectives_list_icon'); 
                   ?>
                   <div class="objective-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
                       <div class="icon-box">
