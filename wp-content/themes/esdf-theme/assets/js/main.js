@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize AOS
   AOS.init({
-    duration: 500,
     easing: 'ease-in-out',
     once: true,
     mirror: true,
