@@ -137,9 +137,9 @@ get_header();
                                     $name = get_sub_field('member_name');
                                     $role = get_sub_field('member_role');
                                     $specialty = get_sub_field('member_specialty');
-                                    $i = 0; 
+                                    $t = 0; 
                                     ?>
-                            <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $i; ?>">
+                            <div class="member-card" data-aos="fade-up" data-aos-delay="<?php echo $t; ?>">
                                 <div class="member-img">
                                     <?php if($image): ?>
                                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
@@ -152,7 +152,7 @@ get_header();
                                 <span class="specialty"><?php echo esc_html($specialty); ?></span>
                             </div>
                         <?php endwhile; ?>
-                    <?php $i += 50; endif; ?>
+                    <?php $t += 50; endif; ?>
                 </div>
              </div>
         </section>
