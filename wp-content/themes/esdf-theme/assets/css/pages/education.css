@@ -63,6 +63,11 @@
   display: flex;
   flex-direction: column;
 }
+.education-card .card-content  .head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
 .education-card .icon-box {
   width: 60px;
