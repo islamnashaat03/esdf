@@ -21,6 +21,7 @@ Version: 1.0.0
 @import "pages/about-page.css";
 @import "globals/pagination.css";
 @import "pages/magazine-page.css";
+@import "pages/education.css";
 
 
 @import "globals/footer.css";

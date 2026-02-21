@@ -32,12 +32,15 @@ get_header();
         </div>
         
         <div class="wrapper">
-            <?php if (have_rows('magazines', 'option')) : ?>
-                <?php while (have_rows('magazines', 'option')) : the_row(); 
-                    $magazine_file = get_sub_field('magazine_file');
-                    $magazine_title = get_sub_field('magazine_name');
-                    $k = 0;
-                ?>
+            <?php 
+            $magazines = get_field('magazines', 'option');
+            if ($magazines) :
+                $magazines = array_reverse($magazines);
+                foreach ($magazines as $index => $magazine) :
+                    $magazine_file = $magazine['magazine_file'];
+                    $magazine_title = $magazine['magazine_name'];
+                    $k = ($index + 1) * 50;
+            ?>
                     <div class="magazine-card" data-aos="fade-up" data-aos-delay="<?php echo $k; ?>">   
                         <div class="magazine-content">
                             <span class="magazine-icon">
@@ -59,12 +62,12 @@ get_header();
                             rel="noopener">
                         </a>
                     </div>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             <?php else : ?>
                 <p class="no-magazines">
                     <?php lang_in('No magazines available at the moment.', 'لا توجد مجلات متاحة في الوقت الحالي.'); ?>
                 </p>
-        <?php   $k+=50; endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
